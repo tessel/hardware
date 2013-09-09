@@ -24,6 +24,9 @@ Pin | Name | Notes
 8 | GPIO1  | User-configurable general purpose input/output. Unique to each module port.
 9 | GPIO2  | User-configurable general purpose input/output. Unique to each module port.
 10 | GPIO3  | User-configurable general purpose input/output. Unique to each module port.
+
+##Module markings
+All modules include a logo and the name of the module, used for installing via npm, in bold on the silkscreen. The second line includes the semantic version of the board and the module's peak (as opposed to average) current draw, expressed in milliamperes (mA). Note that the Tessel's onboard regulator is rated to 1A and that the base system requires beteween 300mA and 600mA depending on network usage and memory access.
  
  
 ##GPIO Bank
