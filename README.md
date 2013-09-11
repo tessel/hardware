@@ -6,6 +6,7 @@ for Tessel v1.0
 
 ![Tessel v1.0 with parts labeled](https://github.com/technicalmachine/tessel-design-docs/blob/master/images/tessel_ports.png?raw=true)
 
+Note that the locations of things such as buttons may change. There are also multiple debug headers on the current board that may be removed in production versions.
 
 ##Module Ports
 
@@ -42,9 +43,9 @@ Although modules may occupy more than one physical port (such as the RFID module
 
 ![Bare GPS v0.9.1 module to deomnstrate standards and best practices for silkscreen on modules ](https://github.com/technicalmachine/tessel-design-docs/blob/master/images/gps_bare.png?raw=true)
 
-All modules include a logo and the name of the module, used for installing via npm, in bold on the silkscreen. The second line of text includes the semantic version of the board and the module's peak (as opposed to average) current draw, expressed in milliamperes (mA). Note that the Tessel's onboard regulator is rated to 1A and that the base system requires beteween 300mA and 600mA depending on network usage and memory access.
+All modules include a logo and the name of the module, used for installing via npm, in bold on the silkscreen. The second line of text includes the semantic version of the board and the module's peak (as opposed to average) current draw, expressed in milliamperes (mA). Note that the Tessel's onboard regulator is rated to 1A and that the typical base system requires beteween 300mA and 600mA depending on network usage and memory access. Parts of the Tessel can also be powered off/put into sleep mode to reduce power consumption.
  
- 
+
 ##GPIO Bank
 
 * The bank itself is marked by the letter “E.”
