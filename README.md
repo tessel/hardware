@@ -1,7 +1,10 @@
 #Hardware documentation
+
 for Tessel v1.0
 
+
 ##Module Ports
+
 Tessel is extensible via modules, which connect to the 10-pin, 0.1” (2.54 mm) right angle female headers on the main board. 
 
 * All pins use 3.3V logic.
@@ -24,6 +27,17 @@ Pin | Name | Notes
 8 | GPIO1  | User-configurable general purpose input/output. Unique to each module port.
 9 | GPIO2  | User-configurable general purpose input/output. Unique to each module port.
 10 | GPIO3  | User-configurable general purpose input/output. Unique to each module port.
+
+
+## Using modules
+
+Any module can be plugged into any module port and installed using Node Package Manager via the command line. Once physically attached, the module can be attached in software in a similar manner. Each module provided by Technical Machine for use with the Tessel is documented within this repository.
+Although modules may occupy more than one physical port (such as the RFID module), they only use the electrical conenctions on one port. The other should be broken out to another header bank on the board.
+
+
+##Module markings
+
+All modules include a logo and the name of the module, used for installing via npm, in bold on the silkscreen. The second line of text includes the semantic version of the board and the module's peak (as opposed to average) current draw, expressed in milliamperes (mA). Note that the Tessel's onboard regulator is rated to 1A and that the base system requires beteween 300mA and 600mA depending on network usage and memory access.
  
  
 ##GPIO Bank
@@ -49,7 +63,16 @@ Pin     |     Name  |  Notes  | Pin | Name | Notes
 19       |    G3       |   GPIO3. User-configurable general purpose input/output. |20        |   5V        |   5V USB power. It is also the input to the onboard 3.3V regulator. Not recommended as source/sink of significant current.
 
 
+## Design philosophy
 
+The module ports each include power, I2C, SPI, and three GPIO lines, which allows for the design of modules of arbitrary complexity. Note that the I2C and SPI busses are common across the entire board; as such, it is recommended that modules communicate over SPI and GPIO whenever possible. Doing so will mitigate the risks of I2C address conflicts and allow for multiple instances of the same kind of module.
+
+Modules should be devices with clear-cut functionality. That is to say, they should have a single, well-defined purpose or a set of closely related functions, rather than an eclectic mix of capabilities onboard. This requirement is designed to reduce complexity, cost, and power consumption and maximize reusability in hardware and software.
+
+
+## Future directions/to do
+In the future, this repository will include schematic and layout templates for Modules in Diptrace. Versions in EAGLE and Upverter are also planned.
+Please note that the hexagon logo on each of the first-party modules is a tardemark of Technical Machine. Although Technical Machine is still formulating thrid-party branding documentation and standards, at this time we request that our community reserves the hexagon for first-party and/or approved hardware.
 
 
 
