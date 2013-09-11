@@ -4,7 +4,7 @@ for Tessel v1.0
 
 ## Physical layout
 
-![TEssel v1.0](https://github.com/technicalmachine/tessel-design-docs/blob/master/images/tessel_ports.png?raw=true)
+![Tessel v1.0 with parts labeled](https://github.com/technicalmachine/tessel-design-docs/blob/master/images/tessel_ports.png?raw=true)
 
 
 ##Module Ports
@@ -38,8 +38,9 @@ Pin | Name | Notes
 Any module can be plugged into any module port and installed using Node Package Manager via the command line. Once physically attached, the module can be attached in software in a similar manner. Each module provided by Technical Machine for use with the Tessel is documented within this repository.
 Although modules may occupy more than one physical port (such as the RFID module), they only use the electrical conenctions on one port. The other should be broken out to another header bank on the board.
 
-
 ##Module markings
+
+![Bare GPS v0.9.1 module to deomnstrate standards and best practices for silkscreen on modules ](https://github.com/technicalmachine/tessel-design-docs/blob/master/images/gps_bare.png?raw=true)
 
 All modules include a logo and the name of the module, used for installing via npm, in bold on the silkscreen. The second line of text includes the semantic version of the board and the module's peak (as opposed to average) current draw, expressed in milliamperes (mA). Note that the Tessel's onboard regulator is rated to 1A and that the base system requires beteween 300mA and 600mA depending on network usage and memory access.
  
