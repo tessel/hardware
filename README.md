@@ -2,6 +2,10 @@
 
 for Tessel v1.0
 
+## Physical layout
+
+![TEssel v1.0](https://github.com/technicalmachine/tessel-design-docs/blob/master/images/tessel_ports.png?raw=true)
+
 
 ##Module Ports
 
