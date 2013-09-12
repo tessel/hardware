@@ -82,7 +82,7 @@ Modules should be devices with clear-cut functionality. That is to say, they sho
 
 ## Future directions/to do
 In the future, this repository will include schematic and layout templates for Modules in Diptrace. Versions in EAGLE and Upverter are also planned.
-Please note that the hexagon logo on each of the first-party modules is a tardemark of Technical Machine. Although Technical Machine is still formulating thrid-party branding documentation and standards, at this time we request that our community reserves the hexagon for first-party and/or approved hardware.
+Please note that the hexagon logo on each of the first-party modules is a trademark of Technical Machine. Although Technical Machine is still formulating thrid-party branding documentation and standards, at this time we request that our community reserves the hexagon for first-party and/or approved hardware.
 
 
 
