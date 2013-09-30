@@ -85,7 +85,7 @@ In the future, this repository will include schematic and layout templates for M
 Please note that the hexagon logo on each of the first-party modules is a trademark of Technical Machine. Although Technical Machine is still formulating thrid-party branding documentation and standards, at this time we request that our community reserves the hexagon for first-party and/or approved hardware.
 
 ## License
-Designed by [Technical Machine](http://technical.io/) and shared under a [Createive Commons Attribution ShareAlike license](http://creativecommons.org/licenses/by-sa/3.0/). All license text and links must be included in any redistribution.
+Designed by [Technical Machine](http://technical.io/) and shared under a [Creative Commons Attribution ShareAlike license](http://creativecommons.org/licenses/by-sa/3.0/). All license text and links must be included in any redistribution.
 
 
 
