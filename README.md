@@ -4,7 +4,7 @@ for Tessel v1.0
 
 ## Custom modules
 
-Thinking of rolling your own module or Tessel-compatible microcontroller? Drop us a line at [team@technical.io](team@technical.io). We'd love to talk!
+Thinking of rolling your own module or Tessel-compatible microcontroller? Drop us a line at [team@technical.io](mailto:team@technical.io). We'd love to talk!
 
 ## Physical layout
 
