@@ -4,7 +4,7 @@ for Tessel v1.0
 
 ## Custom modules
 
-Thinking of rolling your own module or Tessel-compatible microcontroller? Drop us a line at [team@technical.io](team@technical.io). We'd love to talk!
+Thinking of rolling your own module or Tessel-compatible microcontroller? Drop us a line at [team@technical.io](mailto:team@technical.io). We'd love to talk!
 
 ## Physical layout
 
@@ -17,10 +17,10 @@ Note that the locations and dimensions of things such as buttons and mount holes
 Tessel is extensible via modules, which connect to the 10-pin, 0.1” (2.54 mm) right angle female headers on the main board. 
 
 * All pins use 3.3V logic.
-* Module bank names (A, B, C, and D) are located near the corners of the board.
+* Module bank names (A, B, C, and D) are located between the module headers.
 * Adjacent module ports are currently spaced apart by 0.3” (7.62 mm).
-* In between module ports is a 0.13” (3.302 mm) diameter mounting hole with 0.2” (5.08 mm) diameter of route/plane keepout.
-* Pins are located 0.1” (2.54 mm) from the board edge.
+* Pins are located 0.089” (2.22 mm) from the board edge.
+* There are four 0.13" (3.3 mm) diameter mounting holes in the corners of the board, each 0.1" (2.54 mm) in from the edges. They are 2.359" (59.92  mm) and 1.375" (34.93 mm) apart in the horizontal and veritcal dimensions, respectively.
 
 The following is the pinout for a module bank: 
 
@@ -33,10 +33,11 @@ Pin | Name | Notes
 5 | CLK  | SPI clock line. Common for the entire board.
 6 | MISO  | SPI master in/slave out. Common for the entire board.
 7 | MOSI  | SPI master out/slave in. Common for the entire board.
-8 | GPIO1  | User-configurable general purpose input/output. Unique to each module port.
-9 | GPIO2  | User-configurable general purpose input/output. Unique to each module port.
+8 | GPIO1 / UART TX  | User-configurable general purpose input/output. Unique to each module port. / UART serial transmit
+9 | GPIO2 / UART RX  | User-configurable general purpose input/output. Unique to each module port. / UART serial recieve
 10 | GPIO3  | User-configurable general purpose input/output. Unique to each module port.
 
+*Note:* Module ports A, B, and D have hardware UART. UART for Port C is done is software.
 
 ## Using modules
 
@@ -84,7 +85,8 @@ Modules should be devices with clear-cut functionality. That is to say, they sho
 In the future, this repository will include schematic and layout templates for Modules in Diptrace. Versions in EAGLE and Upverter are also planned.
 Please note that the hexagon logo on each of the first-party modules is a trademark of Technical Machine. Although Technical Machine is still formulating thrid-party branding documentation and standards, at this time we request that our community reserves the hexagon for first-party and/or approved hardware.
 
-
+## License
+Designed by [Technical Machine](http://technical.io/) and shared under a [Creative Commons Attribution ShareAlike license](http://creativecommons.org/licenses/by-sa/3.0/). All license text and links must be included in any redistribution.
 
 
 
