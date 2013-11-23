@@ -1,6 +1,6 @@
 #Hardware documentation
 
-for Tessel v1.0
+for Tessel Beta (TM-00-00 and TM-00-02)
 
 ## Custom modules
 
@@ -8,7 +8,7 @@ Thinking of rolling your own module or Tessel-compatible microcontroller? Drop u
 
 ## Physical layout
 
-![Tessel v1.0 with parts labeled](https://github.com/technicalmachine/tessel-design-docs/blob/master/images/tessel_ports.png?raw=true)
+![Tessel (TM-00-00) with parts labeled](https://github.com/technicalmachine/tessel-design-docs/blob/master/images/TM-00-00-ports.png?raw=true)
 
 Note that the locations and dimensions of things such as buttons and mount holes may change. There are also multiple debug headers on the current board that may be removed in production versions.
 
