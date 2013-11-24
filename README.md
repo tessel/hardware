@@ -28,8 +28,8 @@ Pin | Name | Notes
 ----|------|----
 1 | GND  | Ground
 2 | 3V3  |  3.3V power rail, marked with a box around the pin on the silkscreen. The onboard regulator is rated to 1A.
-3 | SCL  | I2C clock line. Common for the entire board.
-4 | SDA  | I2C data line. Common for the entire board.
+3 | SCL  | I2C clock line. Ports A and B share a common I2C bus, as do ports C and D.
+4 | SDA  | I2C data line. Ports A and B share a common I2C bus, as do ports C and D.
 5 | SCK  | SPI clock line. Common for the entire board.
 6 | MISO  | SPI master in/slave out. Common for the entire board.
 7 | MOSI  | SPI master out/slave in. Common for the entire board.
