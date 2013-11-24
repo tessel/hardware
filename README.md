@@ -33,11 +33,11 @@ Pin | Name | Notes
 5 | SCK  | SPI clock line. Common for the entire board.
 6 | MISO  | SPI master in/slave out. Common for the entire board.
 7 | MOSI  | SPI master out/slave in. Common for the entire board.
-8 | GPIO1 / UART TX  | User-configurable general purpose input/output. Unique to each module port. / UART serial transmit (TM-00-02 only)
-9 | GPIO2 / UART RX  | User-configurable general purpose input/output. Unique to each module port. / UART serial recieve (TM-00-02 only)
+8 | GPIO1 / UART TX  | User-configurable general purpose input/output. Unique to each module port. / UART serial transmit
+9 | GPIO2 / UART RX  | User-configurable general purpose input/output. Unique to each module port. / UART serial recieve
 10 | GPIO3  | User-configurable general purpose input/output. Unique to each module port.
 
-*Note:* For TM-00-02, module ports A, B, and D have hardware UART. UART for Port C is done is software. TM-00-00 supports software UART only.
+*Note:* For TM-00-02, module ports A, B, and D have hardware UART. UART for Port C is done is software. TM-00-00 supports software UART only. Software UART is much slower than hardware UART.
 
 ## Using modules
 
@@ -62,7 +62,7 @@ The bottom silkscreen has, from top to bottom/left to right:
 * The module's peak (as opposed to average) current draw
 * The URL for the [Tessel website](https://tessel.io) 
 
-Note that the Tessel's onboard 3.3V regulator is rated to 1A and that the typical base system requires beteween 150mA and 600mA depending on network usage and memory access. Parts of the Tessel can also be powered off/put into sleep mode to reduce power consumption.
+*Note:* the Tessel's onboard 3.3V regulator is rated to 1A and that the typical base system requires beteween 150mA and 600mA depending on network usage and memory access. Parts of the Tessel can also be powered off/put into sleep mode to reduce power consumption.
  
 
 ##GPIO Bank
@@ -89,7 +89,7 @@ Pin     |     Name  |  Notes  | Pin | Name | Notes
 
 ## Design philosophy
 
-The module ports each include power, I2C, SPI, and three GPIO lines, which allows for the design of modules of arbitrary complexity. Note that the I2C and SPI busses are common across the entire board; as such, it is recommended that modules communicate over SPI and GPIO whenever possible. Doing so will mitigate the risks of I2C address conflicts and allow for multiple instances of the same kind of module.
+The module ports each include power, I2C, SPI, and three GPIO lines, which allows for the design of modules of arbitrary complexity. Note that the I2C and SPI busses are shared; as such, it is recommended that modules communicate over SPI and GPIO whenever possible. Doing so will mitigate the risks of I2C address conflicts and allow for multiple instances of the same kind of module.
 
 Modules should be devices with clear-cut functionality. That is to say, they should have a single, well-defined purpose or a set of closely related functions, rather than an eclectic mix of capabilities onboard. This requirement is designed to reduce complexity, cost, and power consumption and maximize reusability in hardware and software.
 
