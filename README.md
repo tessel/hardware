@@ -30,7 +30,7 @@ Pin | Name | Notes
 2 | 3V3  |  3.3V power rail, marked with a box around the pin on the silkscreen. The onboard regulator is rated to 1A.
 3 | SCL  | I2C clock line. Common for the entire board.
 4 | SDA  | I2C data line. Common for the entire board.
-5 | CLK  | SPI clock line. Common for the entire board.
+5 | SCK  | SPI clock line. Common for the entire board.
 6 | MISO  | SPI master in/slave out. Common for the entire board.
 7 | MOSI  | SPI master out/slave in. Common for the entire board.
 8 | GPIO1 / UART TX  | User-configurable general purpose input/output. Unique to each module port. / UART serial transmit
@@ -46,15 +46,28 @@ Although modules may occupy more than one physical port (such as the RFID module
 
 ##Module markings
 
-![Bare GPS v0.9.1 module to deomnstrate standards and best practices for silkscreen on modules ](https://github.com/technicalmachine/tessel-design-docs/blob/master/images/gps_bare.png?raw=true)
+![A Tessel (TM-00-00) "fully loaded" with four modules: top ](https://github.com/technicalmachine/tessel-design-docs/blob/master/images/TM-00-00-fullyloaded-top.jpg?raw=true)
 
-All modules include a logo and the name of the module, used for installing via npm, in bold on the silkscreen. The second line of text includes the semantic version of the board and the module's peak (as opposed to average) current draw, expressed in milliamperes (mA). Note that the Tessel's onboard regulator is rated to 1A and that the typical base system requires beteween 300mA and 600mA depending on network usage and memory access. Parts of the Tessel can also be powered off/put into sleep mode to reduce power consumption.
+
+The module name is the top of board, usually in the upper left corner (with the pin headers facing left). This is what is installed with npm and is usually the name of the corresponding repository on GitHub.
+
+
+![A Tessel (TM-00-00) "fully loaded" with four modules: bottom](https://github.com/technicalmachine/tessel-design-docs/blob/master/images/TM-00-00-fullyloaded-bottom.jpg?raw=true)
+
+The bottom silkscreen has, from top to bottom/left to right:
+
+* The module's symbol, used to identify it at a glance
+* The module name (same as on the top)
+* The module model number
+* The module's peak (as opposed to average) current draw
+* The URL for the [Tessel website](https://tessel.io) 
+
+Note that the Tessel's onboard 3.3V regulator is rated to 1A and that the typical base system requires beteween 150mA and 600mA depending on network usage and memory access. Parts of the Tessel can also be powered off/put into sleep mode to reduce power consumption.
  
 
 ##GPIO Bank
 
-* The bank itself is marked by the letter “E.”
-* The Pin numbers zig-zag. Pin 1 is located by the board edge near the “E.” Pin 2 is directly above Pin 1 and Pin 3 is directly to the right of Pin 1. 
+* The bank itself is marked with "GPIO" on both ends.
 * 2 x 10 (20 pins total).
 * 0.1” (2.54 mm) pin spacing.
 * All pins use 3.3V logic.
@@ -66,7 +79,7 @@ Pin     |     Name  |  Notes  | Pin | Name | Notes
 3       |       3V3    |    3.3V power rail, marked with a box around the pin on the silkscreen. The onboard regulator is rated to 1A. | 4       |      G5      |    GPIO5. User-configurable general purpose input/output.
 5         |     SCL      |   I2C clock line. Common for the entire board. | 6       |      G4       |   GPIO4. User-configurable general purpose input/output. 
 7         |     SDA     |   I2C data line. Common for the entire board. | 8        |     A5       |    ADC5. 10-bit ADC. Reconfigurable as digital GPIO
-9         |     CLK      |   SPI clock line. Common for the entire board. | 10       |    A4        |   ADC4. 10-bit ADC, referenced to GND and 3.3V. Reconfigurable as digital GPIO.
+9         |     SCK      |   SPI clock line. Common for the entire board. | 10       |    A4        |   ADC4. 10-bit ADC, referenced to GND and 3.3V. Reconfigurable as digital GPIO.
 11       |    MISO    |   SPI master in/slave out. Common for the entire board. | 12      |     A3       |    ADC3. 10-bit ADC, referenced to GND and 3.3V. Reconfigurable as digital GPIO.
 13      |     MOSI    | SPI master out/slave in. Common for the entire board. | 14      |     A2      |     ADC2. 10-bit ADC, referenced to GND and 3.3V.  Reconfigurable as 10-bit DAC.
 15     |     G1      |    GPIO1. User-configurable general purpose input/output. Also doubles as UART TX. | 16       |    A1      |     ADC1. 10-bit ADC, referenced to GND and 3.3V. Cannot function as anything else.
