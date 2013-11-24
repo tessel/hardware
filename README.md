@@ -75,18 +75,18 @@ The bottom silkscreen has, from top to bottom/left to right:
 
 Pin     |     Name  |  Notes  | Pin | Name | Notes
 ----|------|--------|---------|-----|------|------
-1       |       GND  |    Ground | 2      |       G6   |      GPIO6. User-configurable general purpose input/output. 
-3       |       3V3    |    3.3V power rail, marked with a box around the pin on the silkscreen. The onboard regulator is rated to 1A. | 4       |      G5      |    GPIO5. User-configurable general purpose input/output.
-5         |     SCL      |   I2C clock line. Common for the entire board. | 6       |      G4       |   GPIO4. User-configurable general purpose input/output. 
-7         |     SDA     |   I2C data line. Common for the entire board. | 8        |     A5       |    ADC5. 10-bit ADC. Reconfigurable as digital GPIO
-9         |     SCK      |   SPI clock line. Common for the entire board. | 10       |    A4        |   ADC4. 10-bit ADC, referenced to GND and 3.3V. Reconfigurable as digital GPIO.
-11       |    MISO    |   SPI master in/slave out. Common for the entire board. | 12      |     A3       |    ADC3. 10-bit ADC, referenced to GND and 3.3V. Reconfigurable as digital GPIO.
-13      |     MOSI    | SPI master out/slave in. Common for the entire board. | 14      |     A2      |     ADC2. 10-bit ADC, referenced to GND and 3.3V.  Reconfigurable as 10-bit DAC.
-15     |     G1      |    GPIO1. User-configurable general purpose input/output. Also doubles as UART TX. | 16       |    A1      |     ADC1. 10-bit ADC, referenced to GND and 3.3V. Cannot function as anything else.
-17      |    G2       |   GPIO2. User-configurable general purpose input/output. Also doubles as UART RX. | 18       |    A0       |    ADC0. 10-bit ADC, referenced to GND purpose input/output. Cannot function as anything else.
-19       |    G3       |   GPIO3. User-configurable general purpose input/output. |20        |   5V        |   5V USB power. It is also the input to the onboard 3.3V regulator. Not recommended as source/sink of significant current.
+1       |  GND     |   Ground                                                                                           | 2     |     5V   |   This is the input to the onboard 3.3V regulator, and typically comes either from USB or an external battery. As such, it may not be exactly 5V, especially if the Tessel is not powered off USB. Not recommended as source/sink of significant current.
+3       |  3V3     |   3.3V power rail, marked with a box around the pin on the silkscreen. The onboard regulator is rated to 1A.                                                                                                            | 4     |     A1   |   ADC1. 10-bit ADC, referenced to GND and 3.3V. Cannot function as anything else.
+5       |  SCL     |   I2C clock line. Common for the entire board.                                                     | 6     |     A0   |   ADC0. 10-bit ADC, referenced to GND purpose input/output. Cannot function as anything else.
+7       |  SDA     |   I2C data line. Common for the entire board.                                                      | 8     |     A5   |   ADC5. 10-bit ADC. Reconfigurable as digital GPIO
+9       |  SCK     |   SPI clock line. Common for the entire board.                                                     | 10    |     A4   |   ADC4. 10-bit ADC, referenced to GND and 3.3V. Reconfigurable as digital GPIO.
+11      |  MISO    |   SPI master in/slave out. Common for the entire board.                                            | 12    |     A3   |   ADC3. 10-bit ADC, referenced to GND and 3.3V. Reconfigurable as digital GPIO.
+13      |  MOSI    |   SPI master out/slave in. Common for the entire board.                                            | 14    |     A2   |   ADC2. 10-bit ADC, referenced to GND and 3.3V.  Reconfigurable as 10-bit DAC.
+15      |  G1      |   GPIO1. User-configurable general purpose input/output. Also doubles as UART TX.                  | 16    |     G6   |   GPIO6. User-configurable general purpose input/output. 
+17      |  G2      |   GPIO2. User-configurable general purpose input/output. Also doubles as UART RX.                  | 18    |     G5   |   GPIO5. User-configurable general purpose input/output.
+19      |  G3      |   GPIO3. User-configurable general purpose input/output.                                           | 20    |     G4   |   GPIO4. User-configurable general purpose input/output. 
 
-
+    
 ## Design philosophy
 
 The module ports each include power, I2C, SPI, and three GPIO lines, which allows for the design of modules of arbitrary complexity. Note that the I2C and SPI busses are shared; as such, it is recommended that modules communicate over SPI and GPIO whenever possible. Doing so will mitigate the risks of I2C address conflicts and allow for multiple instances of the same kind of module.
