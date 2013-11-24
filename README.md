@@ -49,7 +49,7 @@ Although modules may occupy more than one physical port (such as the RFID module
 ![A Tessel (TM-00-00) "fully loaded" with four modules: top ](https://github.com/technicalmachine/tessel-design-docs/blob/master/images/TM-00-00-fullyloaded-top.jpg?raw=true)
 
 
-The module name is the top of board, usually in the upper left corner (with the pin headers facing left). This is what is installed with npm and is usually the name of the corresponding repository on GitHub.
+The module name is the top of board, usually in the upper left corner (with the pin headers facing left). This is what is installed with npm and is usually the name of the corresponding repository on GitHub. The specific formatting of the module name may change.
 
 
 ![A Tessel (TM-00-00) "fully loaded" with four modules: bottom](https://github.com/technicalmachine/tessel-design-docs/blob/master/images/TM-00-00-fullyloaded-bottom.jpg?raw=true)
