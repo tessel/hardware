@@ -28,13 +28,13 @@ Pin | Name | Notes
 ----|------|----
 1 | GND  | Ground
 2 | 3V3  |  3.3V power rail, marked with a box around the pin on the silkscreen. The onboard regulator is rated to 1A.
-3 | SCL  | I2C clock line. Ports A and B share a common I2C bus, as do ports C and D.
-4 | SDA  | I2C data line. Ports A and B share a common I2C bus, as do ports C and D.
+3 | SCL  | I2C clock line. On TM-00-00, this bus is shared board-wide. On TM-00-02, ports A and B share a common I2C bus, as do ports C and D.
+4 | SDA  | I2C data line. On TM-00-00, this bus is shared board-wide. On TM-00-02, ports A and B share a common I2C bus, as do ports C and D.
 5 | SCK  | SPI clock line. Common for the entire board.
 6 | MISO  | SPI master in/slave out. Common for the entire board.
 7 | MOSI  | SPI master out/slave in. Common for the entire board.
-8 | GPIO1 / UART TX  | User-configurable general purpose input/output. Unique to each module port. / UART serial transmit
-9 | GPIO2 / UART RX  | User-configurable general purpose input/output. Unique to each module port. / UART serial recieve
+8 | GPIO1 / UART TX  | User-configurable general purpose input/output. Unique to each module port. / UART serial transmit (TM-00-02 only)
+9 | GPIO2 / UART RX  | User-configurable general purpose input/output. Unique to each module port. / UART serial recieve (TM-00-02 only)
 10 | GPIO3  | User-configurable general purpose input/output. Unique to each module port.
 
 *Note:* Module ports A, B, and D have hardware UART. UART for Port C is done is software.
