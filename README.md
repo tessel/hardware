@@ -37,7 +37,7 @@ Pin | Name | Notes
 9 | GPIO2 / UART RX  | User-configurable general purpose input/output. Unique to each module port. / UART serial recieve (TM-00-02 only)
 10 | GPIO3  | User-configurable general purpose input/output. Unique to each module port.
 
-*Note:* Module ports A, B, and D have hardware UART. UART for Port C is done is software.
+*Note:* For TM-00-02, module ports A, B, and D have hardware UART. UART for Port C is done is software. TM-00-00 supports software UART only.
 
 ## Using modules
 
