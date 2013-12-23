@@ -42,7 +42,7 @@ Pin | Name | Notes
 ## Using modules
 
 Any module can be plugged into any module port and installed using Node Package Manager via the command line. Once physically attached, the module can be attached in software in a similar manner. Each module provided by Technical Machine for use with the Tessel is documented within this repository.
-Although modules may occupy more than one physical port (such as the RFID module), they only use the electrical conenctions on one port. The other should be broken out to another header bank on the board.
+Although modules may occupy more than one physical port (such as the RFID module), they typically only use the electrical conenctions on one port. The other should be broken out to another header bank on the board.
 
 ##Module markings
 
