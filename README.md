@@ -20,7 +20,7 @@ Tessel is extensible via modules, which connect to the 10-pin, 0.1” (2.54 mm) 
 * Module bank names (A, B, C, and D) are located between the module headers.
 * Adjacent module ports are currently spaced apart by 0.3” (7.62 mm).
 * Pins are located 0.089” (2.22 mm) from the board edge.
-* There are four 0.13" (3.3 mm) diameter mounting holes in the corners of the board, each 0.1" (2.54 mm) in from the edges. They are 2.359" (59.92  mm) and 1.375" (34.93 mm) apart in the horizontal and veritcal dimensions, respectively.
+* There are four 0.13" (3.3 mm) diameter mounting holes in the corners of the board, each 0.1" (2.54 mm) in from the edges. They are 2.359" (59.92  mm) and 1.375" (34.93 mm) apart in the horizontal and vertical dimensions, respectively.
 
 The following is the pinout for a module bank: 
 
