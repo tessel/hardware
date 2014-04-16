@@ -11,7 +11,7 @@
 
 ## Physical overview
 
-![Tessel with notable hardware features labeled](https://photos-2.dropbox.com/t/0/AACUiVle_nRAZjB4shMoVGB7U-hYHfGhMnur2JCv1sd9sA/12/23827/png/1024x768/3/1397073600/0/2/TM-00-04-ports.png/2EJVA7-BsmATZOe0he-DXyH5iFViZk2rYWIHk-RGF7U)
+![Tessel with notable hardware features labeled](./images/TM-00-04-ports.png)
 
 Tessel is 2.559" (65 mm) long and 2.185" (55.5 mm) wide. These numbers include the USB port and module headers, which protrude an extra 0.059" (1 mm) and 0.630" (16 mm) from the board edge. Tessel is 0.472" tall (12 mm).
 
@@ -56,7 +56,7 @@ Pin | Name | Notes
 Pin     |     Name  |  Notes
 ----|------|--------
 1       |  GND     |   Ground                                                                                               
-2     |     VIN  |   This is the input to the onboard 3.3 V regulator, and typically comes either from USB or an external battery. As such, its voltage can range from ~3.4 V to 15 V. Please read the [Powering Tessel](https://github.com/technicalmachine/tessel-design-docs/blob/ek-docs/powering-tessel.md) documentation before using this pin. It is not recommended as source of significant current and should **not** be used to power the board.
+2     |     VIN  |   This is the input to the onboard 3.3 V regulator, and typically comes either from USB or an external battery. As such, its voltage can range from ~3.4 V to 15 V. Please read the [Powering Tessel](./powering-tessel.md) documentation before using this pin. It is not recommended as source of significant current and should **not** be used to power the board.
 3       |  3V3     |   3.3 V power rail. The onboard regulator is rated to 3 A.                                              
 4     |     A6   |   ADC6. 10-bit ADC, referenced to GND and 3.3 V. Cannot function as anything else.
 5       |  SCL     |   I2C clock line. Common for the entire board.                                                         
@@ -78,9 +78,9 @@ Pin     |     Name  |  Notes
 
 ### Power in pins ("VIN headers")
 
-![vin headers](https://raw.githubusercontent.com/technicalmachine/tessel-design-docs/ek-docs/images/vin.png)
+![vin headers](./images/vin.png)
 
-Tessel includes a pair of pins for powering the board from a non-USB power source. These pins, referred to as the "VIN headers" are adjacent to the USB port. Please read the [Powering Tessel](https://github.com/technicalmachine/tessel-design-docs/blob/ek-docs/powering-tessel.md) documentation before using these pins.
+Tessel includes a pair of pins for powering the board from a non-USB power source. These pins, referred to as the "VIN headers" are adjacent to the USB port. Please read the [Powering Tessel](./powering-tessel.md) documentation before using these pins.
 
 ### Advanced features
 
@@ -100,7 +100,7 @@ Tessel also includes a number of pins and pads which can be used to access the h
 
 ## Modules
 
-An overview of all first-party modules can be found [here](https://github.com/technicalmachine/tessel-design-docs/blob/ek-docs/modules-overview.md).
+An overview of all first-party modules can be found [here](./modules-overview.md).
 
 Module can be plugged into any module port and installed using Node Package Manager via the command line. Note that the BLE, GPRS, GPS, and Camera modules should not be used on Module Port C if possible due to their reliance on UART.
 
@@ -108,11 +108,11 @@ Although modules may occupy more than one physical port (such as the RFID and GP
 
 ### Module markings
 
-![A Beta Tessel (TM-00-00) "fully loaded" with four modules: top ](https://raw.githubusercontent.com/technicalmachine/tessel-design-docs/ek-docs/beta/images/TM-00-00-fullyloaded-top.jpg)
+![A Beta Tessel (TM-00-00) "fully loaded" with four modules: top ](./beta/images/TM-00-00-fullyloaded-top.jpg)
 
 The module name is the top of board, usually in the upper left corner (with the pin headers facing left). This is also the name of the module's npm software package and is the name of the corresponding repository on GitHub.
 
-![A Beta Tessel (TM-00-00) "fully loaded" with four modules: bottom](https://raw.githubusercontent.com/technicalmachine/tessel-design-docs/ek-docs/beta/images/TM-00-00-fullyloaded-bottom.jpg)
+![A Beta Tessel (TM-00-00) "fully loaded" with four modules: bottom](./beta/images/TM-00-00-fullyloaded-bottom.jpg)
 
 The bottom silkscreen has, from top left to bottom right:
 
