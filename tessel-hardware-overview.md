@@ -7,7 +7,6 @@
 *  Module usage, markings, and design philosophy
 *  Key ICs (integrated circuits) on Tessel and links to datasheets
 *  License information
-*  Not any software docs aside from IC-specific documentation. Software docs are [here](LINK GOES HERE).
 
 ## Physical overview
 
