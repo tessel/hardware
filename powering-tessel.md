@@ -29,7 +29,7 @@ The circuitry which powers the Tessel, collectively referred to as the power pla
 
 ## Powering over USB
 
-![Circed: micro USB port](https://raw.githubusercontent.com/technicalmachine/tessel-design-docs/ek-docs/images/usb.png)
+![Circled: micro USB port](https://raw.githubusercontent.com/technicalmachine/tessel-design-docs/ek-docs/images/usb.png)
 
 The easiest way to power Tessel is through the USB port. At the risk of overgeneralizing, as long as your USB power source can supply at least 500 mA, your Tessellation will function properly. Any USB 2.0 port, 5 V micro USB charger, 5 V "cell phone charger battery", etc. will do. Applying more than 5 V to the Tessel via the USB port may damage or destroy the hardware. For permanent installations/fixtures, we recommend a wall-power adaptor rated to at least 1000 mA.
 
