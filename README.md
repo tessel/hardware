@@ -1,11 +1,13 @@
-tessel-design-docs
+Tessel Hardware Documentation
 ==================
 
 Hardware documentation for the Tessel
 
+<i>If you are looking for the Tessel API Docs, look <a href="https://github.com/tessel/docs">here.</a></i>
+
 Welcome to the new and improved (but likely not final) documentation for Tessel hardware! At this point, we will be rolling out documentation as it gets written and all the underlying firmware and drivers stabilize. Things may change regarding organization, but likely not regarding content.
 
-For the time being, exisiting beta documentation has been moved to the beta folder.
+For the time being, existing beta documentation has been moved to the beta folder (restricted access).
 
 If you think something is missing, don't hesitate to reach out.
 
