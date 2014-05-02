@@ -10,7 +10,7 @@
 
 ## Physical overview
 
-![Tessel with notable hardware features labeled](./images/TM-00-04-ports.png)
+![Tessel with notable hardware features labeled](https://s3.amazonaws.com/technicalmachine-assets/doc+pictures/hardware_design_docs/TM-00-04-ports.png)
 
 Tessel is 2.559" (65 mm) long and 2.185" (55.5 mm) wide. These numbers include the USB port and module headers, which protrude an extra 0.059" (1 mm) and 0.630" (16 mm) from the board edge. Tessel is 0.472" tall (12 mm).
 
@@ -23,11 +23,11 @@ There are four 0.13" (3.3 mm) diameter mounting holes in the corners of the boar
 Tessel is extensible via modules, which connect to the 10-pin, 0.1” (2.54 mm) right angle female headers on the main board. 
 
 * All pins use 3.3V logic.
-* Module bank names (A, B, C, and D) are located between the module headers.
+* Module port names (A, B, C, and D) are located between the module headers.
 * Adjacent module ports are currently spaced apart by 0.3” (7.62 mm).
 * Pins are located 0.089” (2.22 mm) from the board edge.
 
-The following is the pinout for a module bank: 
+The following is the pinout for a module port: 
 
 Pin | Name | Notes
 ----|------|----
@@ -51,6 +51,10 @@ Pin | Name | Notes
 * 0.1” (2.54 mm) pin spacing.
 * All pins use 3.3 V logic.
 * Although it is not recommended, the bottom row of the GPIO bank (nearest the board edge) can be used as a module port (port E on the Tessel).
+
+Pin numbers on the GPIO bank zig-zag back and forth along the length of the connector, starting with the GND pin. This pin is located on the outer edge of the board opposite the MicroUSB port and next to module port B.
+
+![GPIO bank with pins labeled](https://s3.amazonaws.com/technicalmachine-assets/doc+pictures/hardware_design_docs/gpio-pins.jpg)
 
 Pin     |     Name  |  Notes
 ----|------|--------
@@ -77,7 +81,7 @@ Pin     |     Name  |  Notes
 
 ### Power in pins ("VIN headers")
 
-![vin headers](./images/vin.png)
+![vin headers](https://s3.amazonaws.com/technicalmachine-assets/doc+pictures/hardware_design_docs/vin.png)
 
 Tessel includes a pair of pins for powering the board from a non-USB power source. These pins, referred to as the "VIN headers" are adjacent to the USB port. Please read the [Powering Tessel](./powering-tessel.md) documentation before using these pins.
 
@@ -103,15 +107,15 @@ An overview of all first-party modules can be found [here](./modules-overview.md
 
 Module can be plugged into any module port and installed using Node Package Manager via the command line. Note that the BLE, GPRS, GPS, and Camera modules should not be used on Module Port C if possible due to their reliance on UART.
 
-Although modules may occupy more than one physical port (such as the RFID and GPRS modules), they typically only use the electrical connections on one port. The other will be broken out to another header bank on the board.
+Although modules may occupy more than one physical port (such as the RFID and GPRS modules), they typically only use the electrical connections on one port. The other will be broken out to another header on the board.
 
 ### Module markings
 
-![A Beta Tessel (TM-00-00) "fully loaded" with four modules: top ](./beta/images/TM-00-00-fullyloaded-top.jpg)
+![A Beta Tessel (TM-00-00) "fully loaded" with four modules: top ](https://s3.amazonaws.com/technicalmachine-assets/doc+pictures/hardware_design_docs/TM-00-00-fullyloaded-top.jpg)
 
 The module name is the top of board, usually in the upper left corner (with the pin headers facing left). This is also the name of the module's npm software package and is the name of the corresponding repository on GitHub.
 
-![A Beta Tessel (TM-00-00) "fully loaded" with four modules: bottom](./beta/images/TM-00-00-fullyloaded-bottom.jpg)
+![A Beta Tessel (TM-00-00) "fully loaded" with four modules: bottom](https://s3.amazonaws.com/technicalmachine-assets/doc+pictures/hardware_design_docs/TM-00-00-fullyloaded-bottom.jpg)
 
 The bottom silkscreen has, from top left to bottom right:
 
