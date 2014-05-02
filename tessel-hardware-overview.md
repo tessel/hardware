@@ -10,7 +10,7 @@
 
 ## Physical overview
 
-![Tessel with notable hardware features labeled](./images/TM-00-04-ports.png)
+![Tessel with notable hardware features labeled](https://s3.amazonaws.com/technicalmachine-assets/doc+pictures/hardware_design_docs/TM-00-04-ports.png)
 
 Tessel is 2.559" (65 mm) long and 2.185" (55.5 mm) wide. These numbers include the USB port and module headers, which protrude an extra 0.059" (1 mm) and 0.630" (16 mm) from the board edge. Tessel is 0.472" tall (12 mm).
 
@@ -77,7 +77,7 @@ Pin     |     Name  |  Notes
 
 ### Power in pins ("VIN headers")
 
-![vin headers](./images/vin.png)
+![vin headers](https://s3.amazonaws.com/technicalmachine-assets/doc+pictures/hardware_design_docs/vin.png)
 
 Tessel includes a pair of pins for powering the board from a non-USB power source. These pins, referred to as the "VIN headers" are adjacent to the USB port. Please read the [Powering Tessel](./powering-tessel.md) documentation before using these pins.
 
