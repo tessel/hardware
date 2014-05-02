@@ -52,6 +52,10 @@ Pin | Name | Notes
 * All pins use 3.3 V logic.
 * Although it is not recommended, the bottom row of the GPIO bank (nearest the board edge) can be used as a module port (port E on the Tessel).
 
+Pin numbers on the GPIO bank zig-zag back and forth along the length of the connector, starting with the GND pin. This pin is located on the outer edge of the board opposite the MicroUSB port and next to module port B.
+
+![GPIO bank with pins labeled](https://s3.amazonaws.com/technicalmachine-assets/doc+pictures/hardware_design_docs/gpio-pins.jpg)
+
 Pin     |     Name  |  Notes
 ----|------|--------
 1       |  GND     |   Ground                                                                                               
