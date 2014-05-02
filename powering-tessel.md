@@ -13,6 +13,8 @@ This page covers the following:
 *  Power consumption
 *  Absolute maximum ratings
 
+Before reading further, we strongly recommend that you familiarize yourself with the [Tessel hardware](./tessel-hardware-overview.md). 
+
 ## Power plant overview
 
 ![Circled: Tessel power plant](https://s3.amazonaws.com/technicalmachine-assets/doc+pictures/hardware_design_docs/pp.png)
