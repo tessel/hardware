@@ -23,11 +23,11 @@ There are four 0.13" (3.3 mm) diameter mounting holes in the corners of the boar
 Tessel is extensible via modules, which connect to the 10-pin, 0.1” (2.54 mm) right angle female headers on the main board. 
 
 * All pins use 3.3V logic.
-* Module bank names (A, B, C, and D) are located between the module headers.
+* Module port names (A, B, C, and D) are located between the module headers.
 * Adjacent module ports are currently spaced apart by 0.3” (7.62 mm).
 * Pins are located 0.089” (2.22 mm) from the board edge.
 
-The following is the pinout for a module bank: 
+The following is the pinout for a module port: 
 
 Pin | Name | Notes
 ----|------|----
@@ -103,7 +103,7 @@ An overview of all first-party modules can be found [here](./modules-overview.md
 
 Module can be plugged into any module port and installed using Node Package Manager via the command line. Note that the BLE, GPRS, GPS, and Camera modules should not be used on Module Port C if possible due to their reliance on UART.
 
-Although modules may occupy more than one physical port (such as the RFID and GPRS modules), they typically only use the electrical connections on one port. The other will be broken out to another header bank on the board.
+Although modules may occupy more than one physical port (such as the RFID and GPRS modules), they typically only use the electrical connections on one port. The other will be broken out to another header on the board.
 
 ### Module markings
 
