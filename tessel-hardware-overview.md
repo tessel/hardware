@@ -107,11 +107,11 @@ Although modules may occupy more than one physical port (such as the RFID and GP
 
 ### Module markings
 
-![A Beta Tessel (TM-00-00) "fully loaded" with four modules: top ](./beta/images/TM-00-00-fullyloaded-top.jpg)
+![A Beta Tessel (TM-00-00) "fully loaded" with four modules: top ](https://s3.amazonaws.com/technicalmachine-assets/doc+pictures/hardware_design_docs/TM-00-00-fullyloaded-top.jpg)
 
 The module name is the top of board, usually in the upper left corner (with the pin headers facing left). This is also the name of the module's npm software package and is the name of the corresponding repository on GitHub.
 
-![A Beta Tessel (TM-00-00) "fully loaded" with four modules: bottom](./beta/images/TM-00-00-fullyloaded-bottom.jpg)
+![A Beta Tessel (TM-00-00) "fully loaded" with four modules: bottom](https://s3.amazonaws.com/technicalmachine-assets/doc+pictures/hardware_design_docs/TM-00-00-fullyloaded-bottom.jpg)
 
 The bottom silkscreen has, from top left to bottom right:
 
