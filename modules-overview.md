@@ -142,7 +142,7 @@ Communication protocol | I2C, GPIO
 
 #### GPS
 
-Global positioning
+Global positioning system: position reference, movement speed & heading, time reference
 
 ##### Quick overview:
 
@@ -150,14 +150,14 @@ Parameter | Value
 ----------|------
 TM part # | TM-09-XX
 Latest version | TM-09-02
-Key components | A2235-H ([user manual](http://www.mouser.com/catalog/specsheets/EVA2235-H.pdf), [product page](http://www.maestro-wireless.com/a2235-h)) GPS
-Current consumption (rated max) | 69 mA
-Current consumption (average) | 31 mA
-Communication protocol | UART, GPIO
-
-##### Notes
-
-*  **Errata:** module is marked with average current draw of 31 mA on back silk. While not technically incorrect, this is inconsistent with other modules, which are marked with their peak current draw.
+Key components | A2235-H ([user manual](http://www.maestro-wireless.com/download-dp40), [product page](http://www.maestro-wireless.com/a2235-h)) GPS
+Full power mode (Searching) Peak Current | 42mA 
+Full power mode (Searching) Average Current | 36mA 
+Full power mode (Tracking) Average Current | 22mA 
+TricklePower™ Mode | 7.2mA 
+Push-to-Fix Mode | 0.9mA 
+Micro Power Mode（SiRFawareTM）| 29uA 
+Hibernate Status | 27uA 
 
 
 #### GPRS
