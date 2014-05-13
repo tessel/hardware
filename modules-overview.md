@@ -139,7 +139,6 @@ Current consumption (rated max) | 565 microamps
 Current consumption (average) | 320 microamps
 Communication protocol | I2C, GPIO
 
-
 #### GPS
 
 Global positioning system: position reference, movement speed & heading, time reference
@@ -150,15 +149,16 @@ Parameter | Value
 ----------|------
 TM part # | TM-09-XX
 Latest version | TM-09-02
-Key components | A2235-H ([user manual](http://www.maestro-wireless.com/download-dp40), [product page](http://www.maestro-wireless.com/a2235-h)) GPS
-Full power mode (Searching) Peak Current | 42mA 
-Full power mode (Searching) Average Current | 36mA 
-Full power mode (Tracking) Average Current | 22mA 
-TricklePower™ Mode | 7.2mA 
-Push-to-Fix Mode | 0.9mA 
-Micro Power Mode（SiRFawareTM）| 29uA 
-Hibernate Status | 27uA 
+Key components | A2235-H GPS module ([user manual](http://www.maestro-wireless.com/download-dp40), [product page](http://www.maestro-wireless.com/a2235-h))
+Current consumption (rated max) | 42 mA
+Current consumption (average) | 36 mA
+Communication protocol | UART, GPIO
 
+##### Notes
+
+*  This GPS module is based on CSR SiRFstarIV chipset which supports different GPS fix mode and very low power mode (TricklePower™, Push-to-Fix, Micro Power Mode（SiRFaware™), and Hibernate). Depending on usage user can drop the current consumption to less than 1mA.
+*  This GPS module supports two different data mode, either NMEA or SiRF binary mode also called OSP mode.
+*  A-GPS is supported with client generated extended ephemeris up to 3 days and server generated extended ephemeris file download up to 31 days for extremely low time to first fix.
 
 #### GPRS
 
