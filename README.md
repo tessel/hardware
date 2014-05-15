@@ -13,6 +13,7 @@ If you think something is missing, don't hesitate to reach out.
 
 ### What's here
 
+* [A complete schematic of the Tessel (production version, model TM-00-04) in PDF form](./tm-00-04.pdf)
 * [An overview of the Tessel hardware, including key parts and pinouts](./tessel-hardware-overview.md)
 * [A hardware-centric overview of each of the modules that will be released at launch](./modules-overview.md)
 * [A guide on how to power the Tessel](./powering-tessel.md)
