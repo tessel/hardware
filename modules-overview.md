@@ -156,9 +156,9 @@ Communication protocol | UART, GPIO
 
 ##### Notes
 
-*  This GPS module is based on CSR SiRFstarIV chipset which supports different GPS fix mode and very low power mode (TricklePower™, Push-to-Fix, Micro Power Mode（SiRFaware™), and Hibernate). Depending on usage user can drop the current consumption to less than 1mA.
-*  This GPS module supports two different data mode, either NMEA or SiRF binary mode also called OSP mode.
-*  A-GPS is supported with client generated extended ephemeris up to 3 days and server generated extended ephemeris file download up to 31 days for extremely low time to first fix.
+*  The A2235-H is based on CSR SiRFstarIV chipset, which supports a novel GPS fix mode and a variety of low power states.
+*  The A2235-H supports two different data modes: NMEA and SiRF binary mode (also called OSP mode). Technical Machine's default APIs use the module in NMEA mode.
+*  A-GPS is supported with client generated extended ephemeris up to 3 days.
 
 #### GPRS
 
