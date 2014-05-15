@@ -139,10 +139,9 @@ Current consumption (rated max) | 565 microamps
 Current consumption (average) | 320 microamps
 Communication protocol | I2C, GPIO
 
-
 #### GPS
 
-Global positioning
+Global positioning system: position reference, movement speed & heading, time reference
 
 ##### Quick overview:
 
@@ -150,15 +149,16 @@ Parameter | Value
 ----------|------
 TM part # | TM-09-XX
 Latest version | TM-09-02
-Key components | A2235-H ([user manual](http://www.mouser.com/catalog/specsheets/EVA2235-H.pdf), [product page](http://www.maestro-wireless.com/a2235-h)) GPS
-Current consumption (rated max) | 69 mA
-Current consumption (average) | 31 mA
+Key components | A2235-H GPS module ([user manual](http://www.maestro-wireless.com/download-dp40), [product page](http://www.maestro-wireless.com/a2235-h))
+Current consumption (rated max) | 42 mA
+Current consumption (average) | 36 mA
 Communication protocol | UART, GPIO
 
 ##### Notes
 
-*  **Errata:** module is marked with average current draw of 31 mA on back silk. While not technically incorrect, this is inconsistent with other modules, which are marked with their peak current draw.
-
+*  The A2235-H is based on CSR SiRFstarIV chipset, which supports a novel GPS fix mode and a variety of low power states.
+*  The A2235-H supports two different data modes: NMEA and SiRF binary mode (also called OSP mode). Technical Machine's default APIs use the module in NMEA mode.
+*  A-GPS is supported with client generated extended ephemeris up to 3 days.
 
 #### GPRS
 
