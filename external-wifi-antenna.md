@@ -2,12 +2,12 @@
 
 ## Overview
 
-Tessel ships with a built-in chip antenna ([datasheet](http://www.johansontechnology.com/images/stories/ip/rf-antennas/JTI_Antenna-2450AT43A100_1-04.pdf)) which provides a modest peak gain of 2.0 dBi. If this is insufficeint for your needs (if the Tessel consistently has trouble connecting to WiFi networks or drops its connection frequently), you might consider performing the modification shown in the tutorial which follows. Note that the Tessel can only be configured to use either an external antenna or the built-in chip antenna, never both at the same time. This process is reversible, but requires delicate soldering.
+Tessel ships with a built-in chip antenna ([datasheet](http://www.johansontechnology.com/images/stories/ip/rf-antennas/JTI_Antenna-2450AT43A100_1-04.pdf)) which provides a modest peak gain of 2.0 [dBi](http://en.wikipedia.org/wiki/DBi#Antenna_measurements). If this is insufficeint for your needs (if the Tessel consistently has trouble connecting to WiFi networks or drops its connection frequently), you might consider performing the modification shown in the tutorial which follows. Note that the Tessel can only be configured to use either an external antenna or the built-in chip antenna, never both at the same time. This process is reversible, but requires delicate soldering.
 
 Tests performed in-house, which used the `RSSI` (recieve signal strength indicator) value returned by the CC3000, showed a greatly increased RSSI on Tessels using an external antenna compared to those using the built-in antenna. The grain of salt here is that the CC3000's RSSI reporting is not well documented and the values are unitless (and possibly [dimensionless](http://en.wikipedia.org/wiki/Dimensional_analysis) too).
 
 For reference:
-* The reported RSSI jumped from an average of ~51 to an average of ~69 with the antennas used in this tutorial. If the numbers came with units of dBi, this would represent a considerable increase in signal power.
+* The reported RSSI jumped from an average of ~51 to an average of ~69 with the antennas used in this tutorial. If the numbers came with units of [dBm](http://en.wikipedia.org/wiki/DBm), this difference would represent a considerable increase in signal power.
 * We were able to see roughly twice as many networks with an external antenna as with the chip antenna (~9-11 vs. ~4,5), which makes sense given the observed signal strength boost at 2.4GHz from the external antenna. 
 
 *Fair warning:* Whatever nonexistent warranty you may have thought Tessel came with would be voided if you took a soldering iron to your board, and this procedure is difficult even for people with considerable soldering experience. That said, the only thing you really risk damaging is the Tessel's ability to connect to WiFi.
