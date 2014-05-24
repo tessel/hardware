@@ -1,5 +1,7 @@
 # Tessel hardware documentation
 
+*If you are looking for Tessel's API docs, look [here<img src="https://s3.amazonaws.com/technicalmachine-assets/fre+assets/external-link.png">](https://github.com/tessel/docs/blob/master/README.md)</a>.*
+
 ## What's here?
 
 *  Physical overview of Tessel
