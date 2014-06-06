@@ -59,7 +59,7 @@ Communication protocol | SPI, GPIO
 
 ##### Notes
 
-*  Light signal path includes low pass filters with f_c = 1.6 Hz
+*  Light signal path includes low pass filters with *f<sub>c</sub>* = 1.6 Hz
 *  Sound signal path measures loudness via a half wave rectifier
   
 #### Audio
@@ -121,8 +121,8 @@ Communication protocol | SPI, UART, GPIO
 
 ##### Notes
 
-*  Board also includes an ISP header pinout so that it could be used with cameras like the [Pixy](https://www.kickstarter.com/projects/254449872/pixy-cmucam5-a-fast-easy-to-use-vision-sensor). Populating the header would require removing the existing camera
-*  Much of the documentation is in Chinese. We apologize.
+*  Board also includes an ISP header pinout so that it could be used with cameras like the [Pixy](https://www.kickstarter.com/projects/254449872/pixy-cmucam5-a-fast-easy-to-use-vision-sensor). Populating the header would require removing the existing camera.
+*  Much of the documentation for the chip is in Chinese. We apologize.
 
 #### Climate
 
@@ -138,6 +138,15 @@ Key components | [SI7005-B-GM](http://www.silabs.com/Support%20Documents/Technic
 Current consumption (rated max) | 565 microamps
 Current consumption (average) | 320 microamps
 Communication protocol | I2C, GPIO
+
+##### Notes
+
+* There is an important errata with the Si7005 chip (documented only in [this application note](http://www.silabs.com/Support%20Documents/TechnicalDocs/AN607.pdf)) which says:
+
+> The Si7005 should not be on the same bus as other I2C devices when it is active. It acknowledges data 
+bytes that match its address. This issue has been reolved with other members of the Si70xx family
+
+In practice, this means that the TM-12-04 Climate module should always be used on its own I2C bus. Fortunately, two I2C busses exist on Tessel: one is shared between module ports A and B, the other between C and D.
 
 #### GPS
 
@@ -162,7 +171,7 @@ Communication protocol | UART, GPIO
 
 #### GPRS
 
-Voice calls and SMS from Tessel
+Make voice calls and send SMS from Tessel
 
 ##### Quick overview:
 
@@ -177,17 +186,17 @@ Communication protocol | UART, GPIO
 
 ##### Notes
 
-*  This is a "double-wide" module and it *can* use both ports if its jumpers in the top left corner are connected. When connected, G3 is an interrupt which fires when a call or SMS is received and G1 and G2 are a debug UART port (115200 baud only) used to update the SIM900's firmware. SPI and I2C are unused. More documentation will be made available for this soon.
-*  Selectable power source via jumper in top right corner: 3.3 V from Tessel or external power regulated to (3.3 + 5% trim) V. The latter is recommended if possible.
+*  This is a "double-wide" module and it *can* use both ports if its jumpers in the top left corner are connected. When connected, G3 is an interrupt controlled by the SIM900 which fires when a call or SMS is received. G1 and G2 are a debug UART port (115200 baud only) used to update the SIM900's firmware. SPI and I2C are unused.
+*  The module's power source is selectable via the jumper in top right corner: 3.3 V from Tessel or external power regulated to (3.3 + 5% trim) V. The latter is recommended if possible.
 *  The onboard (3.3 + 5% trim) V regulator is rated to 3 A and an absolute max of 17 V in.
-*  Current consumption peaks during transmission and is dependent on output signal power
-*  Replacement antennas will be available in the store
-*  Bring your own SIM card. (We used one from an AT&T GoPhone)
-*  Separate mic and headphone jacks (3.5 mm)
+*  Current consumption peaks during transmission and is dependent on output signal power.
+*  Replacement antennas will be available in the store.
+*  Bring your own SIM card. (We used one from an AT&T GoPhone).
+*  Separate mic and headphone jacks (3.5 mm).
 
 #### Infrared
 
-Communicate and command household electronics 
+Communicate with and command household electronics using IR light
 
 ##### Quick overview:
 
@@ -208,7 +217,7 @@ Communication protocol | UART, GPIO
 
 #### Micro SD Card
 
-Store your data locally (not in the magical, mystical Cloud)
+Store your data locally
 
 ##### Quick overview:
 
@@ -221,13 +230,9 @@ Current consumption (rated max) | 50 mA
 Current consumption (average) | 5 mA
 Communication protocol | SPI, GPIO
 
-##### Notes
-
-*  None
-
 #### nRF24
 
-Low power wireless communication
+Low power wireless communication well-suited for mesh applications
 
 ##### Quick overview:
 
@@ -262,12 +267,13 @@ Communication protocol | GPIO
 ##### Notes
 
 *  Relays are normally open (load disconnected) and will open should the module/Tessel lose power
-*  Current draw increases when the relays close (I-draw = 10mA + 40mA * [number of relays on])
+*  Current draw increases when the relays close (*I<sub>draw</sub>* = 10mA + 40mA * [number of relays on])
 *  Rated to 240 V, 5 A (but please be careful)
+*  Insert and remove wires by pressing down on the connectors with a ballpoint pen (or similar).
 
 #### RFID
 
-Read (and someday write) from (/to) 13.56 MHz RFID cards and tags
+Read and write from/to 13.56 MHz RFID cards and tags
 
 ##### Quick overview:
 
@@ -284,7 +290,9 @@ Communication protocol | I2C, GPIO
 
 *  Module can be switched to communicate over SPI with appropriate resistor pop option swaps
 *  Current is highest when transmitting and much lower most of the time
-*  Compatible MiFare cards will be available in the store
+*  A MiFare Classic card ships with the module
+*  Hardware-compatible with [ISO-14443 RFID tags](http://nfc-tools.org/index.php?title=ISO14443A), including but not limited to: MiFare (Classic 1k, Classic 4k, Ultralight), DesFire, and FeliCa. Further information in the link.
+*  Compatible cards (consumer): Charlie, Clipper
 
 
 #### Servo
@@ -306,6 +314,6 @@ Communication protocol | I2C, GPIO
 
 *  An I2C LED PWM driver makes for a great servo driver too!
 *  16 channels
-*  Tessel is a 3.3V device, so V_out on the PWM channels is 3.3 V (works for standard hobby servos)
+*  Tessel is a 3.3V device, so *V<sub>out</sub>* on the PWM channels is 3.3 V (works for standard hobby servos)
 *  5.5 mm barrel jack (center positive) for powering servos
 *  Can be used to control anything that needs PWM (speed controllers, gate drivers-to-FETs-big LEDs, etc.)
