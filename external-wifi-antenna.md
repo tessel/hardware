@@ -45,7 +45,7 @@ Eric uses [these](http://www.amazon.com/gp/product/B006RBAHWM/ref=oh_details_o07
 
 ## Adding the antenna
 
-This modification connects an alternate RF path and populates the associated connector, thereby leting you add your own antenna.
+This modification connects an alternate RF path and populates the associated connector, thereby letting you add your own antenna.
 
 #### Gather the materials and read this guide completely
 
