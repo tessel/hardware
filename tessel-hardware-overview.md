@@ -1,14 +1,12 @@
 # Tessel hardware documentation
 
-*If you are looking for Tessel's API docs, look [here<img src="https://s3.amazonaws.com/technicalmachine-assets/fre+assets/external-link.png">](https://github.com/tessel/docs/blob/master/README.md)</a>.*
+## Contents
 
-## What's here?
-
-*  Physical overview of Tessel
-*  Pin information for Tessel (board version TM-00-04)
-*  Module usage, markings, and design philosophy
-*  Key ICs (integrated circuits) on Tessel and links to datasheets
-*  License information
+*  [Physical overview of Tessel](#physical-overview)
+*  [Pin information for Tessel](#pins-and-ports) (board version TM-00-04)
+* [ Module usage, markings, and design philosophy](#modules)
+*  [Key ICs (integrated circuits) on Tessel and links to datasheets](#notable-ics)
+*  [License information](#license)
 
 ## Physical overview
 
