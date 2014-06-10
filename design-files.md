@@ -10,7 +10,6 @@ All files and designs are licensed under CC-BY-SA.
 ### Schematic
 
 * [PDF](http://design-files.tessel.io.s3.amazonaws.com/2014.06.06/Tessel/TM-00-04.pdf)
-
 * [DipTrace](http://design-files.tessel.io.s3.amazonaws.com/2014.06.06/Tessel/TM-00-04.dch)
 
 ## Modules
@@ -20,7 +19,6 @@ All files and designs are licensed under CC-BY-SA.
 #### Schematic
 
 * [PDF](http://design-files.tessel.io.s3.amazonaws.com/2014.06.06/Modules/Accelerometer/TM-01-02.pdf)
-
 * [DipTrace](http://design-files.tessel.io.s3.amazonaws.com/2014.06.06/Modules/Accelerometer/TM-01-02.dch)
 
 ### Ambient
@@ -28,7 +26,6 @@ All files and designs are licensed under CC-BY-SA.
 #### Schematic
 
 * [PDF](http://design-files.tessel.io.s3.amazonaws.com/2014.06.06/Modules/Ambient/TM-08-03.pdf)
-
 * [DipTrace](http://design-files.tessel.io.s3.amazonaws.com/2014.06.06/Modules/Ambient/TM-08-03.dch)
 
 ### Audio
@@ -36,7 +33,6 @@ All files and designs are licensed under CC-BY-SA.
 #### Schematic
 
 * [PDF](http://design-files.tessel.io.s3.amazonaws.com/2014.06.06/Modules/Audio/TM-06-05.pdf)
-
 * [DipTrace](http://design-files.tessel.io.s3.amazonaws.com/2014.06.06/Modules/Audio/TM-06-05.dch)
 
 ### BLE
@@ -44,7 +40,6 @@ All files and designs are licensed under CC-BY-SA.
 #### Schematic
 
 * [PDF](http://design-files.tessel.io.s3.amazonaws.com/2014.06.06/Modules/BLE/TM-07-04.pdf)
-
 * [DipTrace](http://design-files.tessel.io.s3.amazonaws.com/2014.06.06/Modules/BLE/TM-07-04.dch)
 
 ### Camera
@@ -52,7 +47,6 @@ All files and designs are licensed under CC-BY-SA.
 #### Schematic
 
 * [PDF](http://design-files.tessel.io.s3.amazonaws.com/2014.06.06/Modules/Camera/TM-12-01.pdf)
-
 * [DipTrace](http://design-files.tessel.io.s3.amazonaws.com/2014.06.06/Modules/Camera/TM-12-01.dch)
 
 ### Climate
@@ -60,7 +54,6 @@ All files and designs are licensed under CC-BY-SA.
 #### Schematic
 
 * [PDF](http://design-files.tessel.io.s3.amazonaws.com/2014.06.06/Modules/Climate/TM-02-02.pdf)
-
 * [DipTrace](http://design-files.tessel.io.s3.amazonaws.com/2014.06.06/Modules/Climate/TM-02-02.dch)
 
 ### GPS
@@ -68,7 +61,6 @@ All files and designs are licensed under CC-BY-SA.
 #### Schematic
 
 * [PDF](http://design-files.tessel.io.s3.amazonaws.com/2014.06.06/Modules/GPS/TM-14-01.pdf)
-
 * [DipTrace](http://design-files.tessel.io.s3.amazonaws.com/2014.06.06/Modules/GPS/TM-14-01.dch)
 
 ### GPRS
@@ -76,7 +68,6 @@ All files and designs are licensed under CC-BY-SA.
 #### Schematic
 
 * [PDF](http://design-files.tessel.io.s3.amazonaws.com/2014.06.06/Modules/GPRS/TM-09-02.pdf)
-
 * [DipTrace](http://design-files.tessel.io.s3.amazonaws.com/2014.06.06/Modules/GPRS/TM-09-02.dch)
 
 ### IR
@@ -84,7 +75,6 @@ All files and designs are licensed under CC-BY-SA.
 #### Schematic
 
 * [PDF](http://design-files.tessel.io.s3.amazonaws.com/2014.06.06/Modules/IR/TM-11-03.pdf)
-
 * [DipTrace](http://design-files.tessel.io.s3.amazonaws.com/2014.06.06/Modules/IR/TM-11-03.dch)
 
 ### MicroSD
@@ -92,7 +82,6 @@ All files and designs are licensed under CC-BY-SA.
 #### Schematic
 
 * [PDF](http://design-files.tessel.io.s3.amazonaws.com/2014.06.06/Modules/MicroSD/TM-05-04.pdf)
-
 * [DipTrace](http://design-files.tessel.io.s3.amazonaws.com/2014.06.06/Modules/MicroSD/TM-05-04.dch)
 
 ### nRF24
@@ -100,7 +89,6 @@ All files and designs are licensed under CC-BY-SA.
 #### Schematic
 
 * [PDF](http://design-files.tessel.io.s3.amazonaws.com/2014.06.06/Modules/nRF24/TM-13-01.pdf)
-
 * [DipTrace](http://design-files.tessel.io.s3.amazonaws.com/2014.06.06/Modules/nRF24/TM-13-01.dch)
 
 ### Relay
@@ -108,7 +96,6 @@ All files and designs are licensed under CC-BY-SA.
 #### Schematic
 
 * [PDF](http://design-files.tessel.io.s3.amazonaws.com/2014.06.06/Modules/Relay/TM-04-04.pdf)
-
 * [DipTrace](http://design-files.tessel.io.s3.amazonaws.com/2014.06.06/Modules/Relay/TM-04-04.dch)
 
 ### RFID
@@ -116,7 +103,6 @@ All files and designs are licensed under CC-BY-SA.
 #### Schematic
 
 * [PDF](http://design-files.tessel.io.s3.amazonaws.com/2014.06.06/Modules/RFID/TM-10-03.pdf)
-
 * [DipTrace](http://design-files.tessel.io.s3.amazonaws.com/2014.06.06/Modules/RFID/TM-10-03.dch)
 
 ### Servo
@@ -124,5 +110,4 @@ All files and designs are licensed under CC-BY-SA.
 #### Schematic
 
 * [PDF](http://design-files.tessel.io.s3.amazonaws.com/2014.06.06/Modules/Servo/TM-03-02.pdf)
-
 * [DipTrace](http://design-files.tessel.io.s3.amazonaws.com/2014.06.06/Modules/Servo/TM-03-02.dch)
