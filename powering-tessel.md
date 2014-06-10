@@ -49,7 +49,7 @@ If you intend to power Tessel off of a battery pack, we recommend soldering wire
 
 The VIN header power input path includes a resettable, positive temperature coefficient ("PTC") fuse which will trip at 3 A. The fuse is designed to protect the Tessel (and anything to which it is attached) from sinking excessive current during short circuit conditions. It was designed with applications involving LiPo batteries in mind, where short circuit currents could easily reach damaging levels.
 
-When a Tessel experiences a short circuit condition, the PTC will heat up, and in doing sochange its electrical properties in such a way that the Tessel will shut down. Once the short is removed, the Tessel will boot up normally. The whole cycle (short, PTC trip, short removal, bootup) can occur in less than ten seconds.
+When a Tessel experiences a short circuit condition, the PTC will heat up, and in doing so change its electrical properties in such a way that the Tessel will shut down. Once the short is removed, the Tessel will boot up normally. The whole cycle (short, PTC trip, short removal, bootup) can occur in less than ten seconds.
 
 If your Tessel's fuse keeps tripping, please read the section on proper use of the VIN pin on the GPIO bank.
 
