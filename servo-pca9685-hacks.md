@@ -58,3 +58,11 @@ It's not uncommon to find motor controllers which map an analog voltage to motor
 In order to have the Servo Module produce an "analog" voltage, you'll likely need to put a [low-pass filter (LPF)](http://en.wikipedia.org/wiki/Low-pass_filter) on the Servo Module's output pin and will want to change the PCA9685's PWM frequency from its default of 50Hz to something on the order of 100kHz (or higher). [The simplest LPF is a resistor in between the Servo Module signal output and the motor controller's signal input and a capacitor between the motor controller's signal input pin and ground](http://en.wikipedia.org/wiki/Low-pass_filter#Electronic_low-pass_filters).
 
 *Note:* If you would like to be able to control both servo-style motors/motor controllers and analog-input controllers, the PWM frequency must remain unchanged at 50Hz. In order to allow for a low PWM frequency, the resistor and capacitor values must be large (on the order of 100k Ohms and 10uF). This will provide a smooth speed response (read: steady but slow to change from one speed to another). If servo-style control is not also required, it is recommended that the PWM frequency be set very high and that the RC values be small (you may even be able to get away without them entirely).
+
+#### Digital control and communication
+
+This category is the most varied. Any controller whch falls into this cateory can probably also be controlled using servo-style PWM with the proper configuration.
+
+UART/Serial (including RS-232) is common, but rare to find at 3.3V. A [logic level converter like this one](https://www.sparkfun.com/products/12009) might work for UART. RS-232 would require a [translator](https://www.sparkfun.com/products/449) or a comparable chip (such as the [MAX232](http://www.ti.com/lit/ds/symlink/max232.pdf)).
+
+There also presumably exist I2C- and SPI-based controllers.
