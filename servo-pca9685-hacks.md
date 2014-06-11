@@ -67,4 +67,4 @@ UART/Serial (including RS-232) is common, but rare to find at 3.3V. A [logic lev
 
 There also presumably exist I2C- and SPI-based controllers.
 
-I'll also throw [H-Bridges](http://en.wikipedia.org/wiki/H_bridge), are some of the most common/simplest motor control circuits, into this category too. They typically take a handful of GPIOs as control signals, which may or may not be PWM'd.
+I'll also throw [H-Bridges](http://en.wikipedia.org/wiki/H_bridge), some of the most common/simplest motor control circuits, into this category too. They typically take a handful of GPIOs as control signals, which may or may not be PWM'd.
