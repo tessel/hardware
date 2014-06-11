@@ -1,4 +1,4 @@
-# Getting the most out of your Servo Module
+## Getting the most out of your Servo Module
 
 The servo module is one of the most versatile modules you can use with Tessel. The [chip at its center is actaully an adjustable PWM controller designed to control LEDs](http://www.nxp.com/documents/data_sheet/PCA9685.pdf) that we repurposed to be a servo driver. What this means is that it's easy to use for lots of applications besides just driving servos. Here are a few of the things it can do:
 
@@ -10,7 +10,7 @@ The servo module is one of the most versatile modules you can use with Tessel. T
 
 ...And with a little work, it can do all of these things at once.
 
-## Technical notes
+### Technical notes
 **or "things you can exploit or may need to work around"**
 
 * The power and ground on the Servo Module are shared
