@@ -1,7 +1,7 @@
 
 # Open source hardware design files for Tessel and its Modules
 
-Below are PDF and [DipTrace](http://diptrace.com/downloads/download-diptrace/) schematics for Tessel and its modules. Board layout files (also for DipTrace) are coming soon.
+Below are PDF and [DipTrace](http://diptrace.com/downloads/download-diptrace/) schematics for Tessel and its modules. Board layout files (and supporting files for silkscreen) are provided in DipTrace format.
 
 All files and designs are licensed under CC-BY-SA.
 
