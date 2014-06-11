@@ -37,13 +37,13 @@ If you want two servos to baheve identically, it's ok to share the signal wire.
 
 ### Control of arbitrary actuators
 
-By default and on its own, the Servo Module is configured to control any*thing* that has a 3-pin "servo" connector. If the actuator you want to control doesn't have such a connector, it can probably still be controlled using the Servo Module in conjunction with an external [motor controller](http://en.wikipedia.org/wiki/Motor_controller).
+By default and on its own, the Servo Module is configured to control any hardware that has a 3-pin "servo" connector. If the actuator you want to control doesn't have such a connector, it can probably still be controlled using the Servo Module in conjunction with an external [motor controller](http://en.wikipedia.org/wiki/Motor_controller).
 
 Controllers come in all shapes, sizes, actuator/motor types, power ratings, etc. and use a variety of different input control signals, and any of them can be used with Tessel with varying amounts of external components. The three most common "bins" into which control signals fall are
 
-* Servo-style PWM inputs. These are the easiest to interface with the Servo Module because you literally just plug them right in and go
-* Analog voltage inputs. Interfacing with these will require some combination of external circuitry and/or that the Servo Module's PWM frequency be set sufficiently high.
-* Digital communication of some kind. UART is common, but typically would require a [level shifter circuit like this one](https://www.sparkfun.com/products/12009) in order to interface with the controller's logic levels.
+* **Servo-style PWM inputs** These are the easiest to interface with the Servo Module because you literally just plug them right in and go
+* **Analog voltage inputs** Interfacing with these will require some combination of external circuitry and/or that the Servo Module's PWM frequency be set sufficiently high.
+* **Digital communication of some kind** UART is common, but typically would require a [level shifter circuit like this one](https://www.sparkfun.com/products/12009) in order to interface with the controller's logic level. These types of controllers should be used with the appropriate pins on the GPIO bank, as opposed to the Servo Module.
 
 #### Servo-style inputs
 
@@ -66,3 +66,4 @@ This category is the most varied. Any controller whch falls into this cateory ca
 UART/Serial (including RS-232) is common, but rare to find at 3.3V. A [logic level converter like this one](https://www.sparkfun.com/products/12009) might work for UART. RS-232 would require a [translator](https://www.sparkfun.com/products/449) or a comparable chip (such as the [MAX232](http://www.ti.com/lit/ds/symlink/max232.pdf)).
 
 There also presumably exist I2C- and SPI-based controllers.
+
