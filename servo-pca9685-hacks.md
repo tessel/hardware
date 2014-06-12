@@ -68,3 +68,12 @@ UART/Serial (including RS-232) is common, but rare to find at 3.3V. A [logic lev
 There also presumably exist I2C- and SPI-based controllers.
 
 I'll also throw [H-Bridges](http://en.wikipedia.org/wiki/H_bridge), some of the most common/simplest motor control circuits, into this category too. They typically take a handful of GPIOs as control signals, which may or may not be PWM'd.
+
+### Small LEDs
+
+The Servo Module can be used to drive small (as in low current consumption) LEDs directly: all you need is an LED and a [current-limiting resistor](https://www.sparkfun.com/tutorials/219). Use [Ohm's law](http://en.wikipedia.org/wiki/Ohm%27s_law) and assume that the LED has a forward voltage drop of around 2V unless you have a datsheet.
+
+Because the drive strength of the Servo Module is 25mA sink and 10mA source, you're actually better off wiring the Servo Module "low side" (connecting the LED between 3.3V and the signal line, rather than from the signal line to ground) because of the higher sink current.
+
+It's safe to drive more than one LED off the same pin by wiring LEDs in [parallel](http://en.wikipedia.org/wiki/Parallel_circuits#Parallel_circuits), but keep in mind that the drive current from the PCA9685 is split between however many LEDs are connected.
+
