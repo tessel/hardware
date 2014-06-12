@@ -6,6 +6,7 @@ The servo module is one of the most versatile modules you can use with Tessel. T
 * Control control arbitrary actuators through the use of an external [motor controller](http://en.wikipedia.org/wiki/Motor_controller)
 * Provide full control (brightness, blink speed, blink frequency) of small LEDs directly
 * Provide full control of large numbers of LEDs with the help of a transistor
+* Assorted other hacks
  
 
 ...And with a little work, it can do all of these things at once.
@@ -77,3 +78,25 @@ Because the drive strength of the Servo Module is 25mA sink and 10mA source, you
 
 It's safe to drive more than one LED off the same pin by wiring LEDs in [parallel](http://en.wikipedia.org/wiki/Parallel_circuits#Parallel_circuits), but keep in mind that the drive current from the PCA9685 is split between however many LEDs are connected.
 
+### Strips of LEDs and large LEDs
+
+This application is discussed at length [on the forums](https://forums.tessel.io/t/wiring-for-led-strip/65).
+
+![common cathode vs. common anode](http://dmsp.digital.eca.ed.ac.uk/blog/actionsound/files/2013/04/rgbled.jpg)
+
+If the LED strip in question does *not* have individually addressible LEDs and is common anode (see the image above), the strip/LED can be controlled easily using the Servo Module and a single nMOS or NPN transistor per channel/device:
+
+* Unplug everything (the Servo Module from the Tessel and the LED power source from the wall)
+* Connect ground on the power supply to ground on the Servo Module
+* Connect the source(s)/emitter(s) of the transistor(s) to the common ground
+* Wire the common lead of the LED strip to power
+* Wire the cathode(s) of the LED(s) to the drain(s)/collector(s) of the transistor(s)
+* Wire the gate(s)/base(s) of the transistor(s) to signal line(s) on the Servo Module
+
+As with small LEDs, the default PWM frequency of 50Hz will probably produce visible flicker; a frequency of around 1kHz is recommended to eliminate this.
+
+An nMOS like [this one](http://www.digikey.com/product-detail/en/PSMN022-30PL,127/568-7512-5-ND/2606361) should do fine.
+
+## Other hacks
+
+* A PWM wave with a 50% duty cycle is a square wave. You could use it to drive a speaker (or a transistor to drive a speaker)
