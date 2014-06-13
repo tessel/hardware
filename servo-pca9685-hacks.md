@@ -30,7 +30,7 @@ The following is a list of useful information about the servo module. If you kno
 
 The protocol used to command servos is very lenient. The advantage to this is that it makes interfacing with such devices very easy. The cost is, or at least can be, precision. Each servo and motor controller will behave a little differently, and if you really want to command a precise, known position or speed, you should calibrate your device. Before reading further, you should familiarize yourself with the [servo protocol](http://www.rcheliwiki.com/Servo_protocol). This tutorial doesn't touch the PWM frequency because the servo module uses the servo protocol's standard 50Hz by default. Adjusting the PWM frequecy is covered in the [LED tutorial](LINK GOES HERE).
 
-Open and run [calibrate.js](https://github.com/tessel/servo-pca9685/blob/master/examples/calibrate.js)/copy and save the code below using `tessel run ./your/path/to/calibrate.js`. The code allows you to find the PWM duty cycle numbers that correspond to full forward, full reverse, and the neutral point by typing numbers into the command line and watching the result.
+Open [calibrate.js](https://github.com/tessel/servo-pca9685/blob/master/examples/calibrate.js)/copy and save the code below and run using `tessel run ./your/path/to/calibrate.js`. The code allows you to find the PWM duty cycle numbers that correspond to full forward, full reverse, and the neutral point by typing numbers into the command line and watching the result.
 
 ```js
 var tessel = require('tessel');
