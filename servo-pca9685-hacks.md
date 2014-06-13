@@ -18,7 +18,7 @@ Below are a series of tutorials to help get you up and running. No matter what y
 
 The following is a list of useful information about the servo module. If you know your way around hardware, most of the tutorials can be deduced from these facts and numbers.
 
-* The power and ground on the Servo Module are shared
+* The power and ground on the Servo Module are shared across all servos. Ground is common with the Tessel.
 * The [barrel jack](http://www.cui.com/product/resource/pj-202a.pdf) is rated to 2.5A, but the [headers](http://media.digikey.com/PDF/Data%20Sheets/Sullins%20PDFs/z%20RzCzzzSzzN-RC,%20ST,11635-B.pdf) are rated to 3A apiece
 * The duty cycle of each of the 16 channels is individually adjustable
 * The PWM frequency is common for the entire chip (all channels)
