@@ -12,7 +12,8 @@ The servo module is one of the most versatile modules you can use with Tessel. T
 ...And with a little work, it can do all of these things at once.
 
 ### Technical notes
-**or "things you can exploit or may need to work around"**
+
+The following is a list of useful information about the servo module. If you know your way around hardware, most of the tutorials can be deduced from these facts and numbers.
 
 * The power and ground on the Servo Module are shared
 * The [barrel jack](http://www.cui.com/product/resource/pj-202a.pdf) is rated to 2.5A, but the [headers](http://media.digikey.com/PDF/Data%20Sheets/Sullins%20PDFs/z%20RzCzzzSzzN-RC,%20ST,11635-B.pdf) are rated to 3A apiece
