@@ -34,7 +34,7 @@ Open [calibrate.js](https://github.com/tessel/servo-pca9685/blob/master/examples
 
 ```js
 var tessel = require('tessel');
-var servolib = require('../'); // Or 'servo-pca9685' in your own code
+var servolib = require('servo-pca9685');
 
 var servo = servolib.use(tessel.port['A']);
 
