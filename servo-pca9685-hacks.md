@@ -2,16 +2,17 @@
 
 ![the humble servo module](https://s3.amazonaws.com/technicalmachine-assets/doc+pictures/servo-module-tutorial/servomodule.jpg)
 
-The servo module is one of the most versatile modules you can use with Tessel. The [chip at its center is actaully an adjustable PWM controller designed to control LEDs](http://www.nxp.com/documents/data_sheet/PCA9685.pdf) that we repurposed to be a servo driver. What this means is that it's easy to use for lots of applications besides just driving servos. Here are a few of the things it can do:
+The servo module is one of the most versatile modules you can use with Tessel. The [chip at its center is actaully an adjustable PWM controller designed to control LEDs](http://www.nxp.com/documents/data_sheet/PCA9685.pdf) that we repurposed to be a servo driver. What this means is that it's easy to use for lots of applications besides just driving servos. Here are a few of the highlights:
 
-* Command and provide power to RC/hobby servos of all shapes and sizes
-* Control control arbitrary actuators through the use of an external [motor controller](http://en.wikipedia.org/wiki/Motor_controller)
-* Provide full control (brightness, blink speed, blink frequency) of small LEDs directly
-* Provide full control of large numbers of LEDs with the help of a transistor
-* Assorted other hacks
- 
+* The procedure explained in the [FRE](start.tessel.io/modules/servo) can be used to command and provide power to RC/hobby servos of all shapes and sizes.
+* Each channel of the module can be [calibrated](#calibrate-your-servomotor-controller) to more effectively use a servo's full range of motion, the full range of speeds/torques available from a specific motor controller, or the full range of brightnesses for an LED/a strip of many LEDs.
+* Control of arbitrary actuators through the use of an external motor controller.
+* Provide full control (brightness, blink speed, blink frequency) of small LEDs directly, or of large numbers/strips of LEDs with the help of a transistor
 
-...And with a little work, it can do all of these things at once. Below are a series of tutorials to help get you up and running.
+
+Below are a series of tutorials to help get you up and running. No matter what you want to do in the end, it's recommended that you take the time at the beginning to [calibrate your hardware as described below](#calibrate-your-servomotor-controller) to make sure it gets used to its full potential.
+
+---
 
 ### Technical notes
 
@@ -25,9 +26,9 @@ The following is a list of useful information about the servo module. If you kno
 * The phase of each channel is adjustable via I2C commands, but not presently through the `servo-pca9685` library
 * The library provides functions which allow you to control the max and min duty cycle of each individual channel. [This script](https://github.com/tessel/servo-pca9685/blob/master/examples/calibrate.js) is super handy for finding your specific actuator/controller's bounds.
 
-## Calibrate your servo/controller
+## Calibrate your servo/motor controller
 
-The protocol used to command servos is very lenient. The advantage to this is that it makes interfacing with such devices very easy. The cost is, or at least can be, precision. Each servo and motor controller will behave a little differently, and if you really want to command a precise, known position or speed, you should calibrate your device. Before reading further, you should familiarize yourself with the [servo protocol](http://www.rcheliwiki.com/Servo_protocol).
+The protocol used to command servos is very lenient. The advantage to this is that it makes interfacing with such devices very easy. The cost is, or at least can be, precision. Each servo and motor controller will behave a little differently, and if you really want to command a precise, known position or speed, you should calibrate your device. Before reading further, you should familiarize yourself with the [servo protocol](http://www.rcheliwiki.com/Servo_protocol). This tutorial doesn't touch the PMW frequency because the servo module uses the servo protocol's standard 50Hz. Adjusting the PWM frequecy is covered in the [LED tutorial](LINK GOES HERE).
 
 Open and run [calibrate.js](https://github.com/tessel/servo-pca9685/blob/master/examples/calibrate.js)/copy and save the code below using `tessel run ./your/path/to/calibrate.js`. The code allows you to find the PWM duty cycle numbers that correspond to full forward, full reverse, and the neutral point by typing numbers into the command line and watching the result.
 
