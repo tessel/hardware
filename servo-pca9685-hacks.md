@@ -95,5 +95,33 @@ servo.calibrate(1, 0.0275, 0.1225, function () {//callback goes here});
 
 I could then call `servo.move(1, 0)` to set the servo to the lower extreme and `servo.move(1, 1)` to move it to the other extreme.
 
+## Arbitrary actuators
+
+Just because your motor doesn't have a "servo connector" doesn't mean it can't be used with Tessel. Everything in the image below is Tessel compatible!
+
+![all the motors](https://s3.amazonaws.com/technicalmachine-assets/doc+pictures/servo-module-tutorial/motor_materials.jpg)
+
+*Pictured: a servo power adapter (5V, 1A), a Tessel, a servo module, a small brushed DC gear motor (with clutch and plastic gear mounted), a brushed DC motor controller ([Sabertooth 2x60](http://www.dimensionengineering.com/products/sabertooth2x60)), a standard servo (the one that ships with the servo module), a micro servo, some 0.1" male to female jumper wires, a small scredriver (for hooking things up to the motor controller), a 6" micro USB cable, and a brushed DC wheelchair motor.*
+
+### Setup
+
+The first step to being able to control something is picking the actuator, and the second step is picking the controller. In this case, I have a small gear motor and a very large wheelchair motor. Both are brushed DC motors, so I'll be using the same controller, a [Sabertooth 2x60](http://www.dimensionengineering.com/products/sabertooth2x60) for both. To give you a sense of scale, the controller is overkill for the small motor but about right for the wheelchair motor in terms of its voltage, current, and power rating. I'll also be using the 12V bus of an ATX power supply to power the motor controller and, because old habits die hard, I've wired an E-Stop in and fused the wheelchair motor for good measure.
+
+If your power source is a PC power supply like mine, you'll have to be careful about current surges, which happen when motors accelerate quickly. The supply I was using would shut itself off automatically if I stopped or started the wheelchair motor too suddenly, so I recommend starting small and calibrating the controller with a small motor if you have one on hand. I also recommend hooking everything up before you powr anything on or run any code.
+
+![small motor setup](https://s3.amazonaws.com/technicalmachine-assets/doc+pictures/servo-module-tutorial/small_motor_setup.jpg)
+
+The setup for the small motor, above, looks a lot like the setup for the large motor, below. In both cases, power comes in at the bottom left of the frame and runs through the E-Stop (big red button) before connecting the to motor controller. The motor wires are connected to channel 1 on the motor controller.
+
+![big motor setup](https://s3.amazonaws.com/technicalmachine-assets/doc+pictures/servo-module-tutorial/big-motor-setup.jpg)
+
+Because the motor controller takes standard servo PWM pulses, wiring the control signal from the servo module was super easy: I connected the ground/0V pin on the Tessel (labeled "-" on the servo module) to that of the motor controller and routed the servo signal lines (labeled "S" on the servo module) to the signal input pins on the motor controller. Here's a [short video clip](https://s3.amazonaws.com/technicalmachine-assets/doc+pictures/servo-module-tutorial/motor_move.mov) of the big motor running you can download if you're curious (not much to look at, honestly). 
+
+### Using it
+
+I began by calibrating the motor controller using the small motor. In the case of DC motors, the PWM duty cycle typically maps to velocity, rather than to position as it does in servos. A minimum duty cycle commands full reverse, a maximum duty cycle commands full speed ahead, and the PWM duty cycle in the middle commands no speed at all.
+
+
+
 
 
