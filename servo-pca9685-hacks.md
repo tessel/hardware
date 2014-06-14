@@ -1,16 +1,20 @@
 # Using the Servo Module with LEDs, big motors, and more
 
-![the humble servo module](https://s3.amazonaws.com/technicalmachine-assets/doc+pictures/servo-module-tutorial/servomodule.jpg)
+**Read this whole section before moving on.**
 
-The servo module is one of the most versatile modules you can use with Tessel. The [chip at its center is actaully an adjustable PWM controller designed to control LEDs](http://www.nxp.com/documents/data_sheet/PCA9685.pdf) that we repurposed to be a servo driver. What this means is that it's easy to use for lots of applications besides just driving servos. Here are a few of the highlights:
+The servo module is one of the most versatile modules you can use with Tessel. The [chip at its center is actually an adjustable PWM controller designed to control LEDs](http://www.nxp.com/documents/data_sheet/PCA9685.pdf) that we repurposed to be a servo driver. What this means is that it's easy to use for lots of applications besides just driving servos.
 
-* The procedure explained in the [FRE](http://start.tessel.io/modules/servo) can be used to command and provide power to RC/hobby servos of all shapes and sizes.
-* Each channel of the module can be [calibrated](#calibrate-your-servo) to more effectively use a servo's full range of motion, the full range of speeds/torques available from a specific motor controller, or the full range of brightnesses for an LED/a strip of many LEDs.
-* Control of arbitrary actuators through the use of an external motor controller.
-* Provide full control (brightness, blink speed, blink frequency) of small LEDs directly, or of large numbers/strips of LEDs with the help of a transistor
+![all the motors](https://s3.amazonaws.com/technicalmachine-assets/doc+pictures/servo-module-tutorial/motor_materials.jpg)
+
+Everything in the image above and in the list below can be done with the servo module.
+
+* [Command and provide power to RC/hobby servos of all shapes and sizes](http://start.tessel.io/modules/servo)
+* [Calibrate each channel to get the most out of the hardware](#calibrate-your-servo). This includes a servo's full range of motion, the full range of speeds/torques available from a specific motor controller, or the full range of brightnesses for an LED/a strip of many LEDs.
+* [Control arbitrary actuators through an external motor controller](#Arbitrary-actuators).
+* [Control LEDs of all shapes and sizes, including their brightness, blink speed, blink frequency](LINK COMING SOON).
 
 
-Below are a series of tutorials to help get you up and running. No matter what you want to do in the end, it's recommended that you take the time at the beginning to [calibrate your hardware as described below](#calibrate-your-servo) to make sure it gets used to its full potential.
+Below are a series of tutorials to help get you up and running. **No matter what you want to do in the end, take the time at the beginning to [calibrate your hardware as described below](#calibrate-your-servo) to make sure it gets used to its full potential.**
 
 ---
 
@@ -79,7 +83,7 @@ After you've plugged everything in and run the code, the servo might look someth
 
 Play around with the console to try out different values. Work your way slowly outwards to minimize the risk of damaging the servo by stalling out, drawing too much current, and frying something. Your servo is stalling if you can hear it trying to move but failing to. This happens when the servo is under heavy load ("working really hard"), and will happen when the servo runs into its built-in mechanical stops at the limits of its range of motion. When it happens, you should be able to hear the motor inside the servo struggling. 
 
-For reference, I found that this particular servo had lower and upper limits of 0.0275 (2.75%) and 0.1225 (12.25%), which allowed it to move through its ful range of motion:
+For reference, I found that this particular servo had lower and upper limits of 0.0275 (2.75%) and 0.1225 (12.25%), which allowed it to move through its full range of motion:
 
 ![servo at one extreme](https://s3.amazonaws.com/technicalmachine-assets/doc+pictures/servo-module-tutorial/servo-low.jpg)
 
