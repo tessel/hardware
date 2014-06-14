@@ -9,7 +9,7 @@ The servo module is one of the most versatile modules you can use with Tessel. T
 Everything in the image above and in the list below can be done with the servo module.
 
 * [Command and provide power to RC/hobby servos of all shapes and sizes](http://start.tessel.io/modules/servo)
-* [Calibrate each channel to get the most out of the hardware](#calibrate-your-servo). This includes a servo's full range of motion, the full range of speeds/torques available from a specific motor controller, or the full range of brightnesses for an LED/a strip of many LEDs.
+* [Calibrate each channel to get the most out of the hardware](#calibrate-your-servo).
 * [Control arbitrary actuators through an external motor controller](#Arbitrary-actuators).
 * [Control LEDs of all shapes and sizes, including their brightness, blink speed, blink frequency](LINK COMING SOON).
 
