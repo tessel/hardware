@@ -77,7 +77,7 @@ After you've plugged everything in and run the code, the servo might look someth
 
 ![10% duty cycle](https://s3.amazonaws.com/technicalmachine-assets/doc+pictures/servo-module-tutorial/servo-0.1.jpg)
 
-Play around with the console to try out different values. Work your way slowly outwards to minimize the risk of damaging the servo by stalling out, drawing too much current, and frying something. Your servo is stalling if you can hear it trying to move but failing to. This happens when the servo is under heavy load ("working really hard"), and will happen when the servo runs into its built-in mechanical stops at the limits of its range of motion. When it happens you should be able to hear the motor inside the servo complaining. 
+Play around with the console to try out different values. Work your way slowly outwards to minimize the risk of damaging the servo by stalling out, drawing too much current, and frying something. Your servo is stalling if you can hear it trying to move but failing to. This happens when the servo is under heavy load ("working really hard"), and will happen when the servo runs into its built-in mechanical stops at the limits of its range of motion. When it happens, you should be able to hear the motor inside the servo struggling. 
 
 For reference, I found that this particular servo had lower and upper limits of 0.0275 (2.75%) and 0.1225 (12.25%), which allowed it to move through its ful range of motion:
 
@@ -85,7 +85,9 @@ For reference, I found that this particular servo had lower and upper limits of 
 
 ![servo at the other extreme](https://s3.amazonaws.com/technicalmachine-assets/doc+pictures/servo-module-tutorial/servo-high.jpg)
 
-Once you've found values that work nicely for a particular physical servo or motor controller, save them! **The command [`servo.configure( whichServo, minPWM, maxPWM, callback() )`](https://github.com/tessel/servo-pca9685#api-servo-configure-whichServo-minPWM-maxPWM-callback-Sets-the-PWM-max-and-min-for-the-specified-servo) maps the given max and min PWM values to 1.0 and 0.0, respectively, thereby making it easy to command two different devices to equivalent states.**
+Once you've found values that work nicely for a particular physical servo or motor controller, save them!
+
+##### **The command [`servo.configure( whichServo, minPWM, maxPWM, callback() )`](https://github.com/tessel/servo-pca9685#api-servo-configure-whichServo-minPWM-maxPWM-callback-Sets-the-PWM-max-and-min-for-the-specified-servo) maps the given max and min PWM values to 1.0 and 0.0, respectively, thereby making it easy to command two different devices to equivalent states.**
 
 In the case of the values I found, the call would look like this:
 
@@ -103,11 +105,13 @@ Just because your motor doesn't have a "servo connector" doesn't mean it can't b
 
 *Pictured: a servo power adapter (5V, 1A), a Tessel, a servo module, a small brushed DC gear motor (with clutch and plastic gear mounted), a brushed DC motor controller ([Sabertooth 2x60](http://www.dimensionengineering.com/products/sabertooth2x60)), a standard servo (the one that ships with the servo module), a micro servo, some 0.1" male to female jumper wires, a small scredriver (for hooking things up to the motor controller), a 6" micro USB cable, and a brushed DC wheelchair motor.*
 
-### Setup
+### First things first
 
 The first step to being able to control something is picking the actuator, and the second step is picking the controller. In this case, I have a small gear motor and a very large wheelchair motor. Both are brushed DC motors, so I'll be using the same controller, a [Sabertooth 2x60](http://www.dimensionengineering.com/products/sabertooth2x60) for both. To give you a sense of scale, the controller is overkill for the small motor but about right for the wheelchair motor in terms of its voltage, current, and power rating. I'll also be using the 12V bus of an ATX power supply to power the motor controller and, because old habits die hard, I've wired an E-Stop in and fused the wheelchair motor for good measure.
 
-If your power source is a PC power supply like mine, you'll have to be careful about current surges, which happen when motors accelerate quickly. The supply I was using would shut itself off automatically if I stopped or started the wheelchair motor too suddenly, so I recommend starting small and calibrating the controller with a small motor if you have one on hand. I also recommend hooking everything up before you powr anything on or run any code. It's also worth mentioing that you should **never** use the GPIO bank to power a motor or a motor controller.
+If your power source is a PC power supply like mine, you'll have to be careful about current surges, which happen when motors accelerate quickly. The supply I was using would shut itself off automatically if I stopped or started the wheelchair motor too suddenly, so I recommend starting small and calibrating the controller with a small motor if you have one on hand. I also recommend hooking everything up before you power anything on or run any code. It's also worth mentioing that you should **never** use the GPIO bank to power a motor or a motor controller. Appropriate use of the GPIO bank Vin pin can be found in [this document](./powering-tessel.md).
+
+### Setup
 
 ![small motor setup](https://s3.amazonaws.com/technicalmachine-assets/doc+pictures/servo-module-tutorial/small_motor_setup.jpg)
 
@@ -123,7 +127,7 @@ I began by calibrating the motor controller using the small motor and [calibrate
 
 The trick, then is finding the duty cycles that maximize the range of commandable speeds but don't saturate the inputs to the controller. Suppose that the motor controller in question expects duty cycles from 6% to 13%, with 6% meaning "full reverse" and 13% meaning "full forward". If you were lazy and called 5% and 15% good enough, you would not only have an asymmetrical speed response (`servo.move(servoNum, 0.75)` would be a different speed than `servo.move(servoNum, 0.25)`), the midpoint PWM value set when you called `servo.move(servoNum, 0.5)` of 10% would have the motor drift forward ever so slightly, as opposed to stop.
 
-If all else fails, a good way to achieve balanced, albeit not necessarily maximum, coverage of avaialable speeds is to find the midpoint and then offset the min and max PWM values symmetrically from tham point. This approach is more desirable from a control perspective.
+If all else fails, a good way to achieve balanced, albeit not necessarily maximum, coverage of avaialable speeds is to find the midpoint and then offset the min and max PWM values symmetrically from tham point. This approach might be desirable from a control perspective.
 
 ### Using your controller
 
