@@ -4,7 +4,7 @@
 
 The servo module is one of the most versatile modules you can use with Tessel. The [chip at its center is actaully an adjustable PWM controller designed to control LEDs](http://www.nxp.com/documents/data_sheet/PCA9685.pdf) that we repurposed to be a servo driver. What this means is that it's easy to use for lots of applications besides just driving servos. Here are a few of the highlights:
 
-* The procedure explained in the [FRE](start.tessel.io/modules/servo) can be used to command and provide power to RC/hobby servos of all shapes and sizes.
+* The procedure explained in the [FRE](http://start.tessel.io/modules/servo) can be used to command and provide power to RC/hobby servos of all shapes and sizes.
 * Each channel of the module can be [calibrated](#calibrate-your-servo) to more effectively use a servo's full range of motion, the full range of speeds/torques available from a specific motor controller, or the full range of brightnesses for an LED/a strip of many LEDs.
 * Control of arbitrary actuators through the use of an external motor controller.
 * Provide full control (brightness, blink speed, blink frequency) of small LEDs directly, or of large numbers/strips of LEDs with the help of a transistor
