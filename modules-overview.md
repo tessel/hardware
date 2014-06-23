@@ -114,7 +114,7 @@ Parameter | Value
 ----------|------
 TM part # | TM-12-XX
 Latest version | TM-12-04
-Key components | LCF-23TN ([datasheet](https://dl.dropboxusercontent.com/s/vm5lnjo0mhta7u1/LCF-23TN%20DATASHEET%28SPI%20JPEG%20Module%29.pdf), [manual](https://www.dropbox.com/s/q1og0ug68a4f9t8/LCF-23TN%20Protocol.pdf)) camera module, a clone of the [VC0706](http://www.southernstars.com/skycube/files/VC0706.pdf) video processor IC
+Key components | LCF-23TN ([datasheet](https://s3.amazonaws.com/design-files.tessel.io/Datasheets/OLD-JC406M-W01.pdf), [manual](https://s3.amazonaws.com/design-files.tessel.io/Datasheets/LCF-23TN+Protocol.pdf)) camera module, a clone of the [VC0706](http://www.southernstars.com/skycube/files/VC0706.pdf) video processor IC
 Current consumption (rated max) | 90 mA
 Current consumption (average) | 90 mA
 Communication protocol | SPI, UART, GPIO
