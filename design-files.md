@@ -88,23 +88,23 @@ All files and designs are licensed under CC-BY-SA.
 
 #### Schematic
 
-* [PDF](http://design-files.tessel.io.s3.amazonaws.com/2014.06.06/Modules/GPS/TM-14-01.pdf)
-* [DipTrace](http://design-files.tessel.io.s3.amazonaws.com/2014.06.06/Modules/GPS/TM-14-01.dch)
+* [PDF](http://design-files.tessel.io.s3.amazonaws.com/2014.06.06/Modules/GPS/TM-09-02.pdf)
+* [DipTrace](http://design-files.tessel.io.s3.amazonaws.com/2014.06.06/Modules/GPS/TM-09-02.dch)
 
 #### Layout
 
-* [Diptrace](http://design-files.tessel.io.s3.amazonaws.com/2014.06.06/Modules/GPS/TM-14-01.dip), [support file for silkscreen](http://design-files.tessel.io.s3.amazonaws.com/2014.06.06/Modules/GPS/TM-14-01.dipb0)
+* [Diptrace](http://design-files.tessel.io.s3.amazonaws.com/2014.06.06/Modules/GPS/TM-09-02.dip), [support file for silkscreen](http://design-files.tessel.io.s3.amazonaws.com/2014.06.06/Modules/GPS/TM-09-02.dipb0)
 
 ### GPRS
 
 #### Schematic
 
-* [PDF](http://design-files.tessel.io.s3.amazonaws.com/2014.06.06/Modules/GPRS/TM-09-02.pdf)
-* [DipTrace](http://design-files.tessel.io.s3.amazonaws.com/2014.06.06/Modules/GPRS/TM-09-02.dch)
+* [PDF](http://design-files.tessel.io.s3.amazonaws.com/2014.06.06/Modules/GPRS/TM-14-01.pdf)
+* [DipTrace](http://design-files.tessel.io.s3.amazonaws.com/2014.06.06/Modules/GPRS/TM-14-01.dch)
 
 #### Layout
 
-* [Diptrace](http://design-files.tessel.io.s3.amazonaws.com/2014.06.06/Modules/GPRS/TM-09-02.dip), [support file for silkscreen](http://design-files.tessel.io.s3.amazonaws.com/2014.06.06/Modules/GPRS/TM-09-02.dipb0)
+* [Diptrace](http://design-files.tessel.io.s3.amazonaws.com/2014.06.06/Modules/GPRS/TM-14-01.dip), [support file for silkscreen](http://design-files.tessel.io.s3.amazonaws.com/2014.06.06/Modules/GPRS/TM-14-01.dipb0)
 
 ### IR
 
