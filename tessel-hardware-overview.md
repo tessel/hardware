@@ -4,7 +4,7 @@
 
 *  [Physical overview of Tessel](#physical-overview)
 *  [Pin information for Tessel](#pins-and-ports) (board version TM-00-04)
-* [ Module usage, markings, and design philosophy](#modules)
+*  [Module usage, markings, and design philosophy](#modules)
 *  [Key ICs (integrated circuits) on Tessel and links to datasheets](#notable-ics)
 *  [License information](#license)
 
@@ -17,6 +17,8 @@ Tessel is 2.559" (65 mm) long and 2.185" (55.5 mm) wide. These numbers include t
 There are four 0.13" (3.3 mm) diameter mounting holes in the corners of the board, each 0.1" (2.54 mm) in from the edges. They are 2.359" (59.92  mm) and 1.375" (34.93 mm) apart in the horizontal and vertical dimensions, respectively.
 
 ## Pins and ports
+
+For the API interfaces of Tessel's pins and ports, see the [Hardware API pin documentation](https://tessel.io/docs/hardwareAPI#pins).
 
 ### Module ports
 
@@ -78,6 +80,18 @@ Pin     |     Name  |  Notes
 18    |     G5   |   GPIO5. User-configurable general purpose input/output.
 19      |  G3      |   GPIO3. User-configurable general purpose input/output.                                               
 20    |     G4   |   GPIO4. User-configurable general purpose input/output. 
+
+### Communication protocol connections
+
+In order to communicate with external hardware using SPI, I2C, or UART, you will need to connect your external device to power, ground, and the appropriate communication channels:
+
+**SPI:** SPI uses SCK (clock), MISO (master in/slave out), and MOSI (master out/slave in). SPI communication is shared across the entire board.
+
+**I2C:** I2C uses SCL (clock) and SDA (data). There are two I2C buses on Tessel. One is shared by ports A, B, and the GPIO bank. The other is shared by ports C and D.
+
+**UART:** Read the datasheet of your part in order to match properly; not all UART connections are labeled in the same way. Tessel's pins are named with respect to the Tessel, so TX transmits out from the Tessel board, and RX receives into the main Tessel board. Module ports A, B, and D each have their own UART, as does the GPIO bank. Module port C does not have UART (pending a software UART).
+
+See the Hardware API documentation for software interfaces for [SPI](https://tessel.io/docs/hardwareAPI#spi), [I2C](https://tessel.io/docs/hardwareAPI#i2c), and [UART](https://tessel.io/docs/hardwareAPI#uart).
 
 ### Power in pins ("VIN headers")
 
