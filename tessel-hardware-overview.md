@@ -117,7 +117,7 @@ Tessel also includes a number of pins and pads which can be used to access the h
 
 ## Modules
 
-An overview of all first-party modules can be found [here](./modules-overview.md).
+A hardware overview of all first-party modules can be found [here](https://tessel.io/docs/moduleHardware).
 
 Module can be plugged into any module port and installed using Node Package Manager via the command line. Note that the BLE, GPRS, GPS, and Camera modules should not be used on Module Port C if possible due to their reliance on UART.
 
