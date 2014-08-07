@@ -7,14 +7,13 @@ All files and designs are licensed under CC-BY-SA.
 
 ## Tessel
 
-### Schematic
+### PDF Schematic
 
 * [PDF](http://design-files.tessel.io.s3.amazonaws.com/2014.06.06/Tessel/TM-00-04.pdf)
-* [DipTrace](http://design-files.tessel.io.s3.amazonaws.com/2014.06.06/Tessel/TM-00-04.dch)
 
-#### Layout
+### ZIP of all DipTrace files
 
-* [Diptrace](http://design-files.tessel.io.s3.amazonaws.com/2014.06.06/Tessel/TM-00-04.dip), [support file for silkscreen](http://design-files.tessel.io.s3.amazonaws.com/2014.06.06/Tessel/TM-00-04.dipb)
+* [DipTrace](https://s3.amazonaws.com/design-files.tessel.io/2014.06.06/Tessel/TM-00-04_DipTrace.zip)
 
 ## Modules
 
