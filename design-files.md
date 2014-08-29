@@ -15,6 +15,13 @@ All files and designs are licensed under CC-BY-SA.
 
 * [DipTrace](https://s3.amazonaws.com/design-files.tessel.io/2014.06.06/Tessel/TM-00-04_DipTrace.zip)
 
+### 3D models
+
+* [.WRL](http://design-files.tessel.io.s3.amazonaws.com/tm-00-04.wrl)
+
+**NOTE:** many components on the board lack proper 3D models (we used the closest thing we could find), so don't trust them to more than ~0.5mm. Board dimensions and holes are correct, though.
+
+
 ## Modules
 
 ### Accelerometer
