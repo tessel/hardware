@@ -19,8 +19,6 @@ This document provides hardware overviews for each Tessel module:
 *  RFID
 *  Servo
 
-**Design files and schematics coming soon.**
-
 ### The modules
 
 #### Accelerometer
