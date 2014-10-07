@@ -1,6 +1,6 @@
-## Hardware documentation for Tessel modules
+# Hardware documentation for Tessel modules
 
-### Scope
+## Scope
 
 This document provides hardware overviews for each Tessel module:
 
@@ -19,13 +19,11 @@ This document provides hardware overviews for each Tessel module:
 *  RFID
 *  Servo
 
-### The modules
-
-#### Accelerometer
+## Accelerometer
 
 Measures acceleration in the x, y, and z directions.
 
-##### Quick overview:
+### Quick overview:
 
 Parameter | Value
 ----------|------
@@ -36,15 +34,15 @@ Current consumption (rated max) | 165 microamps
 Current consumption (average) | 165 microamps
 Communication protocol | I2C, GPIO
 
-##### Notes
+### Notes
 *  I2C address can be modified by shorting J3
 *  +x = towards the Tessel, +y = G3 --> GND, +z = up
 
-#### Ambient
+## Ambient
 
 Measures ambient light and sound. Sound gain adjustable via R6. 
 
-##### Quick overview:
+### Quick overview:
 
 Parameter | Value
 ----------|------
@@ -55,16 +53,16 @@ Current consumption (rated max) | 10 mA
 Current consumption (average) | 10 mA
 Communication protocol | SPI, GPIO
 
-##### Notes
+### Notes
 
 *  Light signal path includes low pass filters with *f<sub>c</sub>* = 1.6 Hz
 *  Sound signal path measures loudness via a half wave rectifier
   
-#### Audio
+## Audio
 
 Audio recording and playback
 
-##### Quick overview:
+### Quick overview:
 
 Parameter | Value
 ----------|------
@@ -75,18 +73,18 @@ Current consumption (rated max) | 60 mA
 Current consumption (average) | 40 mA
 Communication protocol | SPI, GPIO
 
-##### Notes
+### Notes
 
 *  Supports both headphones (referenced to ~1.85 V) and line-out (referenced to GND) with a 32 Ohm max load
 *  Audio recording through an onboard microphone or line-in jack (referenced to GND)
 *  Both of the above are configured electronically via our API
 *  Line-in can be used as a 16-bit ADC (feature not exposed in current APIs)
 
-#### BLE
+## BLE
 
 Communicate with BLE devices
 
-##### Quick overview:
+### Quick overview:
 
 Parameter | Value
 ----------|------
@@ -97,16 +95,16 @@ Current consumption (rated max) | 23 mA
 Current consumption (average) | 18 mA
 Communication protocol | UART, GPIO
 
-##### Notes
+### Notes
 
 *  A slave I2C port, an ADC, and two GPIOs are broken out from the BLE113 module's internal chip
 *  The BLE113 chip can be programmed (firmware upload) using TI hardware and BlueGiga's toolchain
 
-#### Camera
+## Camera
 
 Take pictures with your Tessel
 
-##### Quick overview:
+### Quick overview:
 
 Parameter | Value
 ----------|------
@@ -117,16 +115,16 @@ Current consumption (rated max) | 90 mA
 Current consumption (average) | 90 mA
 Communication protocol | SPI, UART, GPIO
 
-##### Notes
+### Notes
 
 *  Board also includes an ISP header pinout so that it could be used with cameras like the [Pixy](https://www.kickstarter.com/projects/254449872/pixy-cmucam5-a-fast-easy-to-use-vision-sensor). Populating the header would require removing the existing camera.
 *  Much of the documentation for the chip is in Chinese. We apologize.
 
-#### Climate
+## Climate
 
 Measure temperature and humidity
 
-##### Quick overview:
+### Quick overview:
 
 Parameter | Value
 ----------|------
@@ -137,7 +135,7 @@ Current consumption (rated max) | 565 microamps
 Current consumption (average) | 320 microamps
 Communication protocol | I2C, GPIO
 
-##### Notes
+### Notes
 
 * There is an important errata with the Si7005 chip (documented only in [this application note](http://www.silabs.com/Support%20Documents/TechnicalDocs/AN607.pdf)) which says:
 
@@ -146,11 +144,11 @@ bytes that match its address. This issue has been reolved with other members of 
 
 In practice, this means that the TM-12-04 Climate module should always be used on its own I2C bus. Fortunately, two I2C busses exist on Tessel: one is shared between module ports A and B, the other between C and D.
 
-#### GPS
+## GPS
 
 Global positioning system: position reference, movement speed & heading, time reference
 
-##### Quick overview:
+### Quick overview:
 
 Parameter | Value
 ----------|------
@@ -161,17 +159,17 @@ Current consumption (rated max) | 42 mA
 Current consumption (average) | 36 mA
 Communication protocol | UART, GPIO
 
-##### Notes
+### Notes
 
 *  The A2235-H is based on CSR SiRFstarIV chipset, which supports a novel GPS fix mode and a variety of low power states.
 *  The A2235-H supports two different data modes: NMEA and SiRF binary mode (also called OSP mode). Technical Machine's default APIs use the module in NMEA mode.
 *  A-GPS is supported with client generated extended ephemeris up to 3 days.
 
-#### GPRS
+## GPRS
 
 Make voice calls and send SMS from Tessel
 
-##### Quick overview:
+### Quick overview:
 
 Parameter | Value
 ----------|------
@@ -182,7 +180,7 @@ Current consumption (rated max) | 2 A
 Current consumption (average) | 150 mA
 Communication protocol | UART, GPIO
 
-##### Notes
+### Notes
 
 *  This is a "double-wide" module and it *can* use both ports if its jumpers in the top left corner are connected. When connected, G3 is an interrupt controlled by the SIM900 which fires when a call or SMS is received. G1 and G2 are a debug UART port (115200 baud only) used to update the SIM900's firmware. SPI and I2C are unused.
 *  The module's power source is selectable via the jumper in top right corner: 3.3 V from Tessel or external power regulated to (3.3 + 5% trim) V. The latter is recommended if possible.
@@ -192,11 +190,11 @@ Communication protocol | UART, GPIO
 *  Bring your own SIM card. (We used one from an AT&T GoPhone).
 *  Separate mic and headphone jacks (3.5 mm).
 
-#### Infrared
+## Infrared
 
 Communicate with and command household electronics using IR light
 
-##### Quick overview:
+### Quick overview:
 
 Parameter | Value
 ----------|------
@@ -207,17 +205,17 @@ Current consumption (rated max) | 95 mA
 Current consumption (average) | 5 mA
 Communication protocol | UART, GPIO
 
-##### Notes
+### Notes
 
 *  Receiving IR takes very little power. Transmission, on the other hand, uses a good deal of power.
 *  Receiver frequency is fixed at 38 kHz, although pin-compatible parts which operate at other frequencies presumably exist. Check your appliance's manual and/or the internet to make sure your hardware is compatible.
 
 
-#### Micro SD Card
+## Micro SD Card
 
 Store your data locally
 
-##### Quick overview:
+### Quick overview:
 
 Parameter | Value
 ----------|------
@@ -228,11 +226,11 @@ Current consumption (rated max) | 50 mA
 Current consumption (average) | 5 mA
 Communication protocol | SPI, GPIO
 
-#### nRF24
+## nRF24
 
 Low power wireless communication well-suited for mesh applications
 
-##### Quick overview:
+### Quick overview:
 
 Parameter | Value
 ----------|------
@@ -243,15 +241,15 @@ Current consumption (rated max) | 12 mA
 Current consumption (average) | 12 mA
 Communication protocol | SPI, GPIO
 
-##### Notes
+### Notes
 
 *  Good for mesh networking
 
-#### Relay
+## Relay
 
 Switch large, high voltage loads
 
-##### Quick overview:
+### Quick overview:
 
 Parameter | Value
 ----------|------
@@ -262,18 +260,18 @@ Current consumption (rated max) | 90 mA
 Current consumption (average) | 10 mA
 Communication protocol | GPIO
 
-##### Notes
+### Notes
 
 *  Relays are normally open (load disconnected) and will open should the module/Tessel lose power
 *  Current draw increases when the relays close (*I<sub>draw</sub>* = 10mA + 40mA * [number of relays on])
 *  Rated to 240 V, 5 A (but please be careful)
 *  Insert and remove wires by pressing down on the connectors with a ballpoint pen (or similar).
 
-#### RFID
+## RFID
 
 Read and write from/to 13.56 MHz RFID cards and tags
 
-##### Quick overview:
+### Quick overview:
 
 Parameter | Value
 ----------|------
@@ -284,7 +282,7 @@ Current consumption (rated max) | 150 mA
 Current consumption (average) | 60 mA
 Communication protocol | I2C, GPIO
 
-##### Notes
+### Notes
 
 *  Module can be switched to communicate over SPI with appropriate resistor pop option swaps
 *  Current is highest when transmitting and much lower most of the time
@@ -293,11 +291,11 @@ Communication protocol | I2C, GPIO
 *  Compatible cards (consumer): Charlie, Clipper
 
 
-#### Servo
+## Servo
 
 Control up to 16 servos
 
-##### Quick overview:
+### Quick overview:
 
 Parameter | Value
 ----------|------
@@ -308,7 +306,7 @@ Current consumption (rated max) | 50 mA
 Current consumption (average) | 10 mA
 Communication protocol | I2C, GPIO
 
-##### Notes
+### Notes
 
 *  An I2C LED PWM driver makes for a great servo driver too!
 *  16 channels
