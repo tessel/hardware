@@ -4,20 +4,20 @@
 
 This document provides hardware overviews for each Tessel module:
 
-*  Accelerometer
-*  Ambient
-*  Audio
-*  Bluetooth Low Energy
-*  Camera
-*  Climate
-*  GPS
-*  GPRS
-*  Infrared
-*  MicroSD Card
-*  nRF24
-*  Relay
-*  RFID
-*  Servo
+*  [Accelerometer](https://github.com/tessel/hardware/blob/master/modules-overview.md#accelerometer)
+*  [Ambient](https://github.com/tessel/hardware/blob/master/modules-overview.md#ambient)
+*  [Audio](https://github.com/tessel/hardware/blob/master/modules-overview.md#audio)
+*  [Bluetooth Low Energy](https://github.com/tessel/hardware/blob/master/modules-overview.md#ble)
+*  [Camera](https://github.com/tessel/hardware/blob/master/modules-overview.md#camera)
+*  [Climate](https://github.com/tessel/hardware/blob/master/modules-overview.md#climate)
+*  [GPS](https://github.com/tessel/hardware/blob/master/modules-overview.md#gps)
+*  [GPRS](https://github.com/tessel/hardware/blob/master/modules-overview.md#gprs)
+*  [Infrared](https://github.com/tessel/hardware/blob/master/modules-overview.md#infrared)
+*  [MicroSD Card](https://github.com/tessel/hardware/blob/master/modules-overview.md#micro-sd-card)
+*  [nRF24](https://github.com/tessel/hardware/blob/master/modules-overview.md#nrf24)
+*  [Relay](https://github.com/tessel/hardware/blob/master/modules-overview.md#relay)
+*  [RFID](https://github.com/tessel/hardware/blob/master/modules-overview.md#rfid)
+*  [Servo](https://github.com/tessel/hardware/blob/master/modules-overview.md#servo)
 
 ## Accelerometer
 
