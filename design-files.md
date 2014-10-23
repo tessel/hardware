@@ -128,23 +128,23 @@ All files and designs are licensed under CC-BY-SA.
 
 #### Schematic
 
-* [PDF](http://design-files.tessel.io.s3.amazonaws.com/2014.06.06/Modules/MicroSD/TM-05-04.pdf)
-* [DipTrace](http://design-files.tessel.io.s3.amazonaws.com/2014.06.06/Modules/MicroSD/TM-05-04.dch)
+* [PDF](https://s3.amazonaws.com/design-files.tessel.io/2014.06.06/Modules/MicroSD/TM-05-04.pdf)
+* [DipTrace](https://s3.amazonaws.com/design-files.tessel.io/2014.06.06/Modules/MicroSD/TM-05-04.dch)
 
 #### Layout
 
-* [Diptrace](http://design-files.tessel.io.s3.amazonaws.com/2014.06.06/Modules/MicroSD/TM-05-04.dip), [support file for silkscreen](http://design-files.tessel.io.s3.amazonaws.com/2014.06.06/Modules/MicroSD/TM-05-04.dipb2)
+* [Diptrace](https://s3.amazonaws.com/design-files.tessel.io/2014.06.06/Modules/MicroSD/TM-05-05.dip), [support file for silkscreen](https://s3.amazonaws.com/design-files.tessel.io/2014.06.06/Modules/MicroSD/TM-05-05.dipb2)
 
 ### nRF24
 
 #### Schematic
 
-* [PDF](http://design-files.tessel.io.s3.amazonaws.com/2014.06.06/Modules/nRF24/TM-13-01.pdf)
-* [DipTrace](http://design-files.tessel.io.s3.amazonaws.com/2014.06.06/Modules/nRF24/TM-13-01.dch)
+* [PDF](https://s3.amazonaws.com/design-files.tessel.io/2014.06.06/Modules/nRF/TM-13-01.pdf)
+* [DipTrace](https://s3.amazonaws.com/design-files.tessel.io/2014.06.06/Modules/nRF/TM-13-01.dch)
 
 #### Layout
 
-* [Diptrace](http://design-files.tessel.io.s3.amazonaws.com/2014.06.06/Modules/nRF24/TM-13-01.dip), [support file for silkscreen](http://design-files.tessel.io.s3.amazonaws.com/2014.06.06/Modules/nRF24/TM-13-01.dipb0)
+* [Diptrace](https://s3.amazonaws.com/design-files.tessel.io/2014.06.06/Modules/nRF/TM-13-01.dip), [support file for silkscreen](https://s3.amazonaws.com/design-files.tessel.io/2014.06.06/Modules/nRF/TM-13-01.dipb0)
 
 ### Relay
 
