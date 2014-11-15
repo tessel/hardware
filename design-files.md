@@ -172,9 +172,9 @@ All files and designs are licensed under CC-BY-SA.
 
 #### Schematic
 
-* [PDF](http://design-files.tessel.io.s3.amazonaws.com/2014.06.06/Modules/Servo/TM-03-02.pdf)
-* [DipTrace](http://design-files.tessel.io.s3.amazonaws.com/2014.06.06/Modules/Servo/TM-03-02.dch)
+* [PDF](http://design-files.tessel.io.s3.amazonaws.com/2014.06.06/Modules/Servo/TM-03-03.pdf)
+* [DipTrace](http://design-files.tessel.io.s3.amazonaws.com/2014.06.06/Modules/Servo/TM-03-03.dch)
 
 #### Layout
 
-* [Diptrace](http://design-files.tessel.io.s3.amazonaws.com/2014.06.06/Modules/Servo/TM-03-02.dip), [support file for silkscreen](http://design-files.tessel.io.s3.amazonaws.com/2014.06.06/Modules/Servo/TM-03-02.dipb0)
+* [Diptrace](http://design-files.tessel.io.s3.amazonaws.com/2014.06.06/Modules/Servo/TM-03-03.dip), [support file for silkscreen](http://design-files.tessel.io.s3.amazonaws.com/2014.06.06/Modules/Servo/TM-03-03.dipb0)
