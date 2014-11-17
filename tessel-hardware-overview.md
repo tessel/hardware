@@ -61,7 +61,7 @@ Pin numbers on the GPIO bank zig-zag back and forth along the length of the conn
 Pin     |     Name  |  Notes
 ----|------|--------
 1       |  GND     |   Ground                                                                                               
-2     |     VIN  |   This is the input to the onboard 3.3 V regulator, and typically comes either from USB or an external battery. As such, its voltage can range from ~3.4 V to 15 V. Please read the [Powering Tessel](./powering-tessel.md) documentation before using this pin. It is not recommended as source of significant current and should **not** be used to power the board.
+2     |     VIN  |   This is the input to the onboard 3.3 V regulator, and typically comes either from USB or an external battery. As such, its voltage can range from ~3.4 V to 15 V. Please read the [Powering Tessel](//tessel.io/docs/power) documentation before using this pin. It is not recommended as source of significant current and should **not** be used to power the board.
 3       |  3V3     |   3.3 V power rail. The onboard regulator is rated to 3 A.                                              
 4     |     A6   |   ADC6. 10-bit ADC, referenced to GND and 3.3 V. Cannot function as anything else.
 5       |  SCL     |   I2C clock line. Common for the entire board.                                                         
