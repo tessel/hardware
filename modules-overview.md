@@ -68,7 +68,7 @@ Parameter | Value
 ----------|------
 TM part # | TM-06-XX
 Latest version | TM-06-05
-Key components | VS1053B-L ([datasheet](http://www.vlsi.fi/fileadmin/datasheets/vlsi/vs1053.pdf), [product page](http://www.vlsi.fi/en/products/vs1053.html)) audio codec chip, [SPU0410HR5H-PB](http://ke-www2.knowles.com/search/prods_pdf/SPU0410HR5H.pdf) microphone
+Key components | VS1053B-L ([datasheet](https://www.sparkfun.com/datasheets/Components/SMD/vs1053.pdf), [product page](http://www.vlsi.fi/en/products/vs1053.html)) audio codec chip, [SPU0410HR5H-PB](http://ke-www2.knowles.com/search/prods_pdf/SPU0410HR5H.pdf) microphone
 Current consumption (rated max) | 60 mA
 Current consumption (average) | 40 mA
 Communication protocol | SPI, GPIO
