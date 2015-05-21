@@ -48,7 +48,7 @@ Parameter | Value
 ----------|------
 TM part # | TM-08-XX
 Latest version | TM-08-03
-Key components | [PT15-21C/TR8](http://www.everlight.com/datasheets/PT15-21C-TR8_datasheet.pdf) photodiode, [SPU0410HR5H-PB](http://ke-www2.knowles.com/search/prods_pdf/SPU0410HR5H.pdf) microphone
+Key components | [PT15-21C/TR8](http://www.everlight.com/file/ProductFile/PT15-21C-TR8.pdf) photodiode, [SPU0410HR5H-PB](http://ke-www2.knowles.com/search/prods_pdf/SPU0410HR5H.pdf) microphone
 Current consumption (rated max) | 10 mA
 Current consumption (average) | 10 mA
 Communication protocol | SPI, GPIO
