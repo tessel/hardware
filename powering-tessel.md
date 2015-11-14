@@ -13,7 +13,7 @@ This page covers the following:
 *  Power consumption
 *  Absolute maximum ratings
 
-Before reading further, we strongly recommend that you familiarize yourself with the [Tessel hardware](https://github.com/tessel/hardware/blob/master/tessel-hardware-overview.md). 
+Before reading further, we strongly recommend that you familiarize yourself with the [Tessel hardware](https://github.com/tessel/hardware/blob/master/tessel-hardware-overview.md).
 
 ## Power plant overview
 
@@ -72,7 +72,7 @@ The voltage at the GPIO bank's VIN pin should only be used either as a reference
 
 If the system includes an external source of power, that source should be used to power the system's other components directly, as opposed to routing all power through the Tessel. This arrangement mitigates all the risks explained above, as well as the likelihood that a failure of other devices in the system would hurt Tessel.
 
-If you are unsure of how to proceed, check the forums (at this point a work in progress) for guidance or [email us](mailto:team@technical.io).
+If you are unsure of how to proceed, check the forums for guidance or [email us](mailto:team@tessel.io).
 
 ## Current available on the 3.3 V rail
 
@@ -91,7 +91,6 @@ Power consumption is tough to calculate because it depends so heavily on what mo
 *  P = I*V
 *  Tessel consumes about 1 Watt when it has the CC3000 WiFi radio enabled and is running ```blinky.js```.
 *  Modules are marked with their peak current draw, not average current draw.
-*  Bug [Kevin](mailto:kevin@technical.io). He's working on optimizing our runtime to allow for low-power operation.
 
 ## Absolute maximum ratings
 
