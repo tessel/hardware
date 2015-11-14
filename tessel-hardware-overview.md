@@ -18,18 +18,18 @@ There are four 0.13" (3.3 mm) diameter mounting holes in the corners of the boar
 
 ## Pins and ports
 
-For the API interfaces of Tessel's pins and ports, see the [Hardware API pin documentation](https://tessel.io/docs/hardwareAPI#pins).
+For the API interfaces of Tessel's pins and ports, see the [Hardware API pin documentation](https://github.com/tessel/t1-docs/blob/master/hardware-api.md#pins).
 
 ### Module ports
 
-Tessel is extensible via modules, which connect to the 10-pin, 0.1” (2.54 mm) right angle female headers on the main board. 
+Tessel is extensible via modules, which connect to the 10-pin, 0.1” (2.54 mm) right angle female headers on the main board.
 
 * All pins use 3.3V logic.
 * Module port names (A, B, C, and D) are located between the module headers.
 * Adjacent module ports are currently spaced apart by 0.3” (7.62 mm).
 * Pins are located 0.089” (2.22 mm) from the board edge.
 
-The following is the pinout for a module port: 
+The following is the pinout for a module port:
 
 Pin | Name | Notes
 ----|------|----
@@ -61,7 +61,7 @@ Pin numbers on the GPIO bank zig-zag back and forth along the length of the conn
 Pin     |     Name  |  Notes
 ----|------|--------
 1       |  GND     |   Ground                                                                                               
-2     |     VIN  |   This is the input to the onboard 3.3 V regulator, and typically comes either from USB or an external battery. As such, its voltage can range from ~3.4 V to 15 V. Please read the [Powering Tessel](//tessel.io/docs/power) documentation before using this pin. It is not recommended as source of significant current and should **not** be used to power the board.
+2     |     VIN  |   This is the input to the onboard 3.3 V regulator, and typically comes either from USB or an external battery. As such, its voltage can range from ~3.4 V to 15 V. Please read the [Powering Tessel](https://github.com/tessel/hardware/blob/master/powering-tessel.md) documentation before using this pin. It is not recommended as source of significant current and should **not** be used to power the board.
 3       |  3V3     |   3.3 V power rail. The onboard regulator is rated to 3 A.                                              
 4     |     A6   |   ADC6. 10-bit ADC, referenced to GND and 3.3 V. Cannot function as anything else.
 5       |  SCL     |   I2C clock line. Common for the entire board.                                                         
@@ -75,11 +75,11 @@ Pin     |     Name  |  Notes
 13      |  MOSI    |   SPI master out/slave in. Common for the entire board.                                                
 14    |     A1   |   ADC2. 10-bit ADC, referenced to GND and 3.3 V. Reconfigurable as 10-bit DAC.
 15      |  G1      |   GPIO1. User-configurable general purpose input/output. Planned as software UART TX.                  
-16    |     G6   |   GPIO6. User-configurable general purpose input/output. 
+16    |     G6   |   GPIO6. User-configurable general purpose input/output.
 17      |  G2      |   GPIO2. User-configurable general purpose input/output. Planned as software UART RX.                  
 18    |     G5   |   GPIO5. User-configurable general purpose input/output.
 19      |  G3      |   GPIO3. User-configurable general purpose input/output.                                               
-20    |     G4   |   GPIO4. User-configurable general purpose input/output. 
+20    |     G4   |   GPIO4. User-configurable general purpose input/output.
 
 ### Communication protocol connections
 
@@ -91,7 +91,7 @@ In order to communicate with external hardware using SPI, I2C, or UART, you will
 
 **UART:** Read the datasheet of your part in order to match properly; not all UART connections are labeled in the same way. Tessel's pins are named with respect to the Tessel, so TX transmits out from the Tessel board, and RX receives into the main Tessel board. Module ports A, B, and D each have their own UART, as does the GPIO bank. Module port C does not have UART (pending a software UART).
 
-See the Hardware API documentation for software interfaces for [SPI](https://tessel.io/docs/hardwareAPI#spi), [I2C](https://tessel.io/docs/hardwareAPI#i2c), and [UART](https://tessel.io/docs/hardwareAPI#uart).
+See the Hardware API documentation for software interfaces for [SPI](https://github.com/tessel/t1-docs/blob/master/hardware-api.md#spi), [I2C](https://github.com/tessel/t1-docs/blob/master/hardware-api.md#i2c), and [UART](https://github.com/tessel/t1-docs/blob/master/hardware-api.md#uart).
 
 ### Power in pins ("VIN headers")
 
@@ -117,7 +117,7 @@ Tessel also includes a number of pins and pads which can be used to access the h
 
 ## Modules
 
-A hardware overview of all first-party modules can be found [here](https://tessel.io/docs/moduleHardware).
+A hardware overview of all first-party modules can be found [here](https://github.com/tessel/hardware/blob/master/modules-overview.md).
 
 Module can be plugged into any module port and installed using Node Package Manager via the command line. Note that the BLE, GPRS, and Camera modules should not be used on Module Port C if possible due to their reliance on UART.
 
@@ -137,7 +137,7 @@ The bottom silkscreen has, from top left to bottom right:
 * The module name (same as on the top)
 * The module model number
 * The module's peak (as opposed to average) current draw
-* The URL for the [Tessel website](https://tessel.io) 
+* The URL for the [Tessel website](https://tessel.io)
 
 *Note:* the Tessel's onboard 3.3 V regulator is rated to 3 A and that the typical base system requires between 150mA and 300mA depending on network usage and memory access. Putting parts of the Tessel into low power states to reduce power consumption is an area of active development.
 
