@@ -203,7 +203,7 @@ Latest version | TM-11-03
 Key components | [TSOP38238](http://www.vishay.com/docs/82491/tsop382.pdf) 38 kHz IR demodulator, [SFH-4646-Z](http://www.osram-os.com/Graphics/XPic6/00116152_0.pdf) IR LED
 Current consumption (rated max) | 95 mA
 Current consumption (average) | 5 mA
-Communication protocol | UART, GPIO
+Communication protocol | SPI, GPIO
 
 ### Notes
 
